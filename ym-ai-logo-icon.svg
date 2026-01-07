@@ -10,36 +10,27 @@
         </linearGradient>
     </defs>
 
-    <!-- Simplified Neural Mesh - Bold strokes for small sizes -->
-    <g transform="translate(256, 220)" fill="none">
+    <!-- Simplified Neural Mesh - Centered -->
+    <g transform="translate(256, 256)" fill="none">
 
         <!-- Outer layer -->
         <g stroke="#ffffff" stroke-width="3" opacity="0.9">
-            <ellipse cx="0" cy="0" rx="28" ry="85"/>
-            <ellipse cx="0" cy="0" rx="28" ry="85" transform="rotate(45)"/>
-            <ellipse cx="0" cy="0" rx="28" ry="85" transform="rotate(90)"/>
-            <ellipse cx="0" cy="0" rx="28" ry="85" transform="rotate(135)"/>
+            <ellipse cx="0" cy="0" rx="35" ry="105"/>
+            <ellipse cx="0" cy="0" rx="35" ry="105" transform="rotate(45)"/>
+            <ellipse cx="0" cy="0" rx="35" ry="105" transform="rotate(90)"/>
+            <ellipse cx="0" cy="0" rx="35" ry="105" transform="rotate(135)"/>
         </g>
 
         <!-- Middle layer with accent -->
         <g stroke="url(#iconGradient)" stroke-width="2.5" opacity="0.85">
-            <ellipse cx="0" cy="0" rx="16" ry="50"/>
-            <ellipse cx="0" cy="0" rx="16" ry="50" transform="rotate(45)"/>
-            <ellipse cx="0" cy="0" rx="16" ry="50" transform="rotate(90)"/>
-            <ellipse cx="0" cy="0" rx="16" ry="50" transform="rotate(135)"/>
+            <ellipse cx="0" cy="0" rx="20" ry="62"/>
+            <ellipse cx="0" cy="0" rx="20" ry="62" transform="rotate(45)"/>
+            <ellipse cx="0" cy="0" rx="20" ry="62" transform="rotate(90)"/>
+            <ellipse cx="0" cy="0" rx="20" ry="62" transform="rotate(135)"/>
         </g>
 
         <!-- Core -->
-        <circle cx="0" cy="0" r="8" fill="url(#iconGradient)"/>
+        <circle cx="0" cy="0" r="10" fill="url(#iconGradient)"/>
 
     </g>
-
-    <!-- YM Text - Bold for legibility -->
-    <text x="256" y="410"
-          font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-          font-size="72"
-          font-weight="700"
-          fill="#ffffff"
-          text-anchor="middle"
-          letter-spacing="8">YM</text>
 </svg>
