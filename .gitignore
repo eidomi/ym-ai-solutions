@@ -17,6 +17,8 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
+*.png
+*.pss
 *.sw?
 
 # Logs
