@@ -18,6 +18,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.png
+!og-image.png
 *.pss
 *.sw?
 
