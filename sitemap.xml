@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ym-ai-solutions.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ym-ai-solutions.vercel.app/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ym-ai-solutions.vercel.app/?lang=en"/>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
