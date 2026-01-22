@@ -316,6 +316,9 @@
                 --glass-border: rgba(255, 255, 255, 0.2);
                 --glass-blur: 24px;
 
+                /* Line-art illustration color */
+                --line-art-color: rgba(196, 133, 106, 0.6);
+
                 /* Mobile-first spacing */
                 --section-padding-x: 1rem;
                 --section-padding-y: 3rem;
@@ -1540,23 +1543,28 @@
             .workflow-node-1 {
                 top: 15%;
                 right: 8%;
-                opacity: 0.1;
+                opacity: 0.08;
+                animation: subtle-float 35s ease-in-out infinite;
             }
 
             .workflow-node-2 {
                 bottom: 25%;
                 left: 5%;
-                opacity: 0.08;
+                opacity: 0.06;
                 width: 150px;
                 height: 150px;
+                animation: subtle-float 40s ease-in-out infinite;
+                animation-delay: -10s;
             }
 
             .workflow-node-3 {
                 top: 60%;
                 right: 12%;
-                opacity: 0.07;
+                opacity: 0.05;
                 width: 100px;
                 height: 100px;
+                animation: subtle-float 38s ease-in-out infinite;
+                animation-delay: -20s;
             }
 
             /* Connection Lines */
@@ -1566,7 +1574,7 @@
                 height: 200px;
                 top: 35%;
                 left: 3%;
-                opacity: 0.06;
+                opacity: 0.04;
             }
 
             .flow-circle {
@@ -1575,7 +1583,9 @@
                 height: 200px;
                 bottom: 10%;
                 right: 5%;
-                opacity: 0.08;
+                opacity: 0.06;
+                animation: subtle-float 42s ease-in-out infinite;
+                animation-delay: -15s;
             }
 
             /* Data Flow Path */
@@ -1585,7 +1595,13 @@
                 height: 300px;
                 top: 5%;
                 left: 15%;
-                opacity: 0.05;
+                opacity: 0.03;
+            }
+
+            /* Subtle float animation for illustrations */
+            @keyframes subtle-float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-8px); }
             }
 
             /* Hide some illustrations on mobile */
@@ -1641,83 +1657,83 @@
         <div class="illustration-layer">
             <!-- AI Agent Node 1 - Brain/Processing -->
             <svg class="workflow-node workflow-node-1" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="45" stroke="#C4856A" stroke-width="1.5" fill="none"/>
-                <circle cx="60" cy="60" r="30" stroke="#C4856A" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
-                <circle cx="60" cy="60" r="8" stroke="#C4856A" stroke-width="1.5" fill="none"/>
+                <circle cx="60" cy="60" r="45" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="60" cy="60" r="30" stroke="#C4856A" stroke-width="0.75" fill="none" stroke-dasharray="4 4"/>
+                <circle cx="60" cy="60" r="8" stroke="#C4856A" stroke-width="1" fill="none"/>
                 <!-- Neural connections -->
-                <line x1="60" y1="15" x2="60" y2="30" stroke="#C4856A" stroke-width="1"/>
-                <line x1="60" y1="90" x2="60" y2="105" stroke="#C4856A" stroke-width="1"/>
-                <line x1="15" y1="60" x2="30" y2="60" stroke="#C4856A" stroke-width="1"/>
-                <line x1="90" y1="60" x2="105" y2="60" stroke="#C4856A" stroke-width="1"/>
+                <line x1="60" y1="15" x2="60" y2="30" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="60" y1="90" x2="60" y2="105" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="15" y1="60" x2="30" y2="60" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="90" y1="60" x2="105" y2="60" stroke="#C4856A" stroke-width="0.75"/>
                 <!-- Diagonal connectors -->
-                <line x1="25" y1="25" x2="38" y2="38" stroke="#C4856A" stroke-width="1"/>
-                <line x1="95" y1="25" x2="82" y2="38" stroke="#C4856A" stroke-width="1"/>
-                <line x1="25" y1="95" x2="38" y2="82" stroke="#C4856A" stroke-width="1"/>
-                <line x1="95" y1="95" x2="82" y2="82" stroke="#C4856A" stroke-width="1"/>
+                <line x1="25" y1="25" x2="38" y2="38" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="95" y1="25" x2="82" y2="38" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="25" y1="95" x2="38" y2="82" stroke="#C4856A" stroke-width="0.75"/>
+                <line x1="95" y1="95" x2="82" y2="82" stroke="#C4856A" stroke-width="0.75"/>
             </svg>
 
             <!-- AI Agent Node 2 - Data Flow -->
             <svg class="workflow-node workflow-node-2" viewBox="0 0 150 150">
-                <rect x="30" y="30" width="90" height="90" rx="12" stroke="#C4856A" stroke-width="1.5" fill="none"/>
-                <rect x="50" y="50" width="50" height="50" rx="8" stroke="#C4856A" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+                <rect x="30" y="30" width="90" height="90" rx="12" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <rect x="50" y="50" width="50" height="50" rx="8" stroke="#C4856A" stroke-width="0.75" fill="none" stroke-dasharray="3 3"/>
                 <!-- Input arrows -->
-                <path d="M10 75 L30 75" stroke="#C4856A" stroke-width="1"/>
-                <path d="M75 10 L75 30" stroke="#C4856A" stroke-width="1"/>
+                <path d="M10 75 L30 75" stroke="#C4856A" stroke-width="0.75"/>
+                <path d="M75 10 L75 30" stroke="#C4856A" stroke-width="0.75"/>
                 <!-- Output arrows -->
-                <path d="M120 75 L140 75" stroke="#C4856A" stroke-width="1"/>
-                <path d="M75 120 L75 140" stroke="#C4856A" stroke-width="1"/>
+                <path d="M120 75 L140 75" stroke="#C4856A" stroke-width="0.75"/>
+                <path d="M75 120 L75 140" stroke="#C4856A" stroke-width="0.75"/>
                 <!-- Arrow heads -->
-                <path d="M25 72 L30 75 L25 78" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <path d="M72 25 L75 30 L78 25" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <path d="M25 72 L30 75 L25 78" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <path d="M72 25 L75 30 L78 25" stroke="#C4856A" stroke-width="0.75" fill="none"/>
             </svg>
 
             <!-- AI Agent Node 3 - Automation Gear -->
             <svg class="workflow-node workflow-node-3" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="35" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="50" cy="50" r="20" stroke="#C4856A" stroke-width="1.5" fill="none"/>
-                <circle cx="50" cy="50" r="6" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="50" cy="50" r="35" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="50" cy="50" r="20" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="50" cy="50" r="6" stroke="#C4856A" stroke-width="0.75" fill="none"/>
                 <!-- Gear teeth hints -->
-                <line x1="50" y1="8" x2="50" y2="15" stroke="#C4856A" stroke-width="2"/>
-                <line x1="50" y1="85" x2="50" y2="92" stroke="#C4856A" stroke-width="2"/>
-                <line x1="8" y1="50" x2="15" y2="50" stroke="#C4856A" stroke-width="2"/>
-                <line x1="85" y1="50" x2="92" y2="50" stroke="#C4856A" stroke-width="2"/>
+                <line x1="50" y1="8" x2="50" y2="15" stroke="#C4856A" stroke-width="1.5"/>
+                <line x1="50" y1="85" x2="50" y2="92" stroke="#C4856A" stroke-width="1.5"/>
+                <line x1="8" y1="50" x2="15" y2="50" stroke="#C4856A" stroke-width="1.5"/>
+                <line x1="85" y1="50" x2="92" y2="50" stroke="#C4856A" stroke-width="1.5"/>
             </svg>
 
             <!-- Connection Lines - Workflow Path -->
             <svg class="connection-lines" viewBox="0 0 300 200">
-                <path d="M20 100 Q80 40 150 100 T280 100" stroke="#C4856A" stroke-width="1.5" fill="none" stroke-dasharray="8 4"/>
-                <circle cx="20" cy="100" r="6" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="150" cy="100" r="6" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="280" cy="100" r="6" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <path d="M20 100 Q80 40 150 100 T280 100" stroke="#C4856A" stroke-width="1" fill="none" stroke-dasharray="8 4"/>
+                <circle cx="20" cy="100" r="6" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="150" cy="100" r="6" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="280" cy="100" r="6" stroke="#C4856A" stroke-width="0.75" fill="none"/>
                 <!-- Small connector dots -->
-                <circle cx="85" cy="70" r="3" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="215" cy="70" r="3" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="85" cy="70" r="3" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="215" cy="70" r="3" stroke="#C4856A" stroke-width="0.75" fill="none"/>
             </svg>
 
             <!-- Circular Flow - Agent Cycle -->
             <svg class="flow-circle" viewBox="0 0 200 200">
-                <circle cx="100" cy="100" r="70" stroke="#C4856A" stroke-width="1" fill="none" stroke-dasharray="6 6"/>
-                <circle cx="100" cy="100" r="50" stroke="#C4856A" stroke-width="1.5" fill="none"/>
+                <circle cx="100" cy="100" r="70" stroke="#C4856A" stroke-width="0.75" fill="none" stroke-dasharray="6 6"/>
+                <circle cx="100" cy="100" r="50" stroke="#C4856A" stroke-width="1" fill="none"/>
                 <!-- Flow arrows on circle -->
-                <path d="M100 30 L105 40 L95 40 Z" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <path d="M170 100 L160 105 L160 95 Z" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <path d="M100 170 L95 160 L105 160 Z" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <path d="M30 100 L40 95 L40 105 Z" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <path d="M100 30 L105 40 L95 40 Z" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <path d="M170 100 L160 105 L160 95 Z" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <path d="M100 170 L95 160 L105 160 Z" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <path d="M30 100 L40 95 L40 105 Z" stroke="#C4856A" stroke-width="0.75" fill="none"/>
                 <!-- Center node -->
-                <circle cx="100" cy="100" r="15" stroke="#C4856A" stroke-width="1.5" fill="none"/>
+                <circle cx="100" cy="100" r="15" stroke="#C4856A" stroke-width="1" fill="none"/>
             </svg>
 
             <!-- Data Flow Path -->
             <svg class="data-flow" viewBox="0 0 400 300">
                 <!-- Flowing path -->
-                <path d="M50 150 C100 80, 180 80, 200 150 S300 220, 350 150" stroke="#C4856A" stroke-width="1" fill="none" stroke-dasharray="10 5"/>
+                <path d="M50 150 C100 80, 180 80, 200 150 S300 220, 350 150" stroke="#C4856A" stroke-width="0.75" fill="none" stroke-dasharray="10 5"/>
                 <!-- Data points -->
-                <circle cx="50" cy="150" r="8" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="200" cy="150" r="8" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="350" cy="150" r="8" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="50" cy="150" r="8" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="200" cy="150" r="8" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="350" cy="150" r="8" stroke="#C4856A" stroke-width="0.75" fill="none"/>
                 <!-- Connector dots -->
-                <circle cx="125" cy="100" r="4" stroke="#C4856A" stroke-width="1" fill="none"/>
-                <circle cx="275" cy="200" r="4" stroke="#C4856A" stroke-width="1" fill="none"/>
+                <circle cx="125" cy="100" r="4" stroke="#C4856A" stroke-width="0.75" fill="none"/>
+                <circle cx="275" cy="200" r="4" stroke="#C4856A" stroke-width="0.75" fill="none"/>
             </svg>
         </div>
 
