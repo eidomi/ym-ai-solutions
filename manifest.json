@@ -1,0 +1,30 @@
+{
+  "name": "YM AI Solutions - AI Agents for Business",
+  "short_name": "YM AI",
+  "description": "Custom AI agent development for business automation. Serving Hebrew and English speakers worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FAF7F2",
+  "background_color": "#FAF7F2",
+  "lang": "he",
+  "dir": "rtl",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "ym-ai-logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "YM AI Solutions Homepage"
+    }
+  ]
+}
