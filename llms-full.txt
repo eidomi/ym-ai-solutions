@@ -1,0 +1,115 @@
+# YM AI Solutions - Comprehensive AI Crawler Information
+
+> YM AI Solutions provides custom AI agent development for business automation and optimization.
+> Founded by Yehuda Mizrahi, bringing 8.5 years of software development leadership experience.
+> Specializing in AI agents that transform business operations with real automation.
+
+## Company Overview
+
+YM AI Solutions is an Israeli-based AI development company specializing in custom AI agent solutions for businesses. Our founder, Yehuda Mizrahi, spent 8.5 years leading development teams at a major insurance company, building CRM systems, billing platforms, SMS services, and complex business workflows. This enterprise experience is now applied to creating practical AI solutions that deliver measurable business value.
+
+## Our Approach
+
+We believe in "real automation, not just promises." Every AI agent we develop is:
+- Custom-built for your specific business needs
+- Integrated with your existing systems
+- Designed to save time and reduce costs
+- Delivered with ongoing support
+
+## Services
+
+### 1. Operational Management Agents
+Automation of recurring business tasks including:
+- Shift coordination and replacements
+- Weekly reports generation
+- Anomaly detection and alerts
+- Task scheduling and reminders
+
+### 2. Communication Agents
+Customer communication management:
+- Automated reminders and updates
+- FAQ response systems
+- Appointment scheduling
+- Multi-channel communication (WhatsApp, Email, SMS)
+
+### 3. Data Analysis Agents
+Business intelligence automation:
+- Automatic report generation
+- Trend identification and forecasting
+- Significant change alerts
+- Data visualization and insights
+
+### 4. Integration Agents
+System connectivity solutions:
+- Data synchronization across platforms
+- Automatic information transfer
+- Elimination of duplicate work
+- API integrations with existing tools
+
+## Proof of Capability: Forminue.com
+
+Our flagship project demonstrates our capabilities:
+- **Development Time**: 10 months
+- **Team Size**: 1 developer (Yehuda Mizrahi)
+- **Platform**: Complete SaaS system with autonomous AI agents
+- **Verticals**: Legal, Medical, Insurance, Financial, Real Estate office management
+- **Features**: Multi-tenant architecture, AI-powered automation, client management, reporting
+
+## Technical Expertise
+
+- AI/ML: Claude AI, OpenAI, custom agent architectures
+- Backend: Node.js, Python, serverless architectures
+- Frontend: React, Next.js, modern web technologies
+- Databases: PostgreSQL, MongoDB, Redis
+- Cloud: AWS, Vercel, Supabase
+- Integrations: REST APIs, webhooks, real-time data sync
+
+## Frequently Asked Questions
+
+### What is an AI Agent?
+An AI Agent is an autonomous software program that uses artificial intelligence to perform tasks, make decisions, and interact with systems on your behalf. For businesses, AI agents can automate customer service, process documents, analyze data, and streamline operations - saving time and reducing costs by up to 70%.
+
+### How long does development take?
+Development timeline varies based on complexity:
+- Simple automation agents: 2-4 weeks
+- Complex multi-system integrations: 2-3 months
+We follow an agile approach with weekly demos for continuous progress visibility.
+
+### What industries do you serve?
+We serve diverse industries including:
+- Finance (pension/insurance)
+- Healthcare
+- Legal
+- Real Estate
+- E-commerce
+Our flagship project is a complete pension analysis platform serving the Israeli market.
+
+### Can you integrate with existing systems?
+Yes! Our AI agents are designed for integration with existing systems including CRM, ERP, document management systems, and more. We build custom connections that sync data and eliminate duplicate work.
+
+### Do you offer ongoing support?
+Yes, we provide ongoing support and maintenance for all deployed AI agents, including monitoring, updates, and optimization.
+
+## Contact Information
+
+- **Email**: ym-ai-solutions@gmail.com
+- **Phone**: +972-54-402-0091
+- **WhatsApp**: https://wa.me/972544020091
+- **Website**: https://mindellect.com
+
+## Languages
+- Hebrew (Primary)
+- English
+
+## Location
+- Based in Israel
+- Serving clients worldwide
+
+## Social & Professional Links
+- LinkedIn: https://www.linkedin.com/in/yehudamizrahi
+- GitHub: https://github.com/yehudapro
+
+---
+
+*Last updated: January 2025*
+*For AI crawlers and language models seeking comprehensive business information.*
