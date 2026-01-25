@@ -143,12 +143,12 @@ body.en {
     height: 100%;
     background-image:
         linear-gradient(
-            rgba(196, 133, 106, 0.03) 1px,
+            rgba(196, 133, 106, 0.06) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(196, 133, 106, 0.03) 1px,
+            rgba(196, 133, 106, 0.06) 1px,
             transparent 1px
         );
     background-size: 80px 80px;
@@ -1300,14 +1300,14 @@ body.drawer-open {
 .workflow-node-1 {
     top: 15%;
     right: 8%;
-    opacity: 0.08;
+    opacity: 0.15;
     animation: subtle-float 35s ease-in-out infinite;
 }
 
 .workflow-node-2 {
     bottom: 25%;
     left: 5%;
-    opacity: 0.06;
+    opacity: 0.12;
     width: 150px;
     height: 150px;
     animation: subtle-float 40s ease-in-out infinite;
@@ -1317,7 +1317,7 @@ body.drawer-open {
 .workflow-node-3 {
     top: 60%;
     right: 12%;
-    opacity: 0.05;
+    opacity: 0.10;
     width: 100px;
     height: 100px;
     animation: subtle-float 38s ease-in-out infinite;
@@ -1331,7 +1331,7 @@ body.drawer-open {
     height: 200px;
     top: 35%;
     left: 3%;
-    opacity: 0.04;
+    opacity: 0.10;
 }
 
 .flow-circle {
@@ -1340,7 +1340,7 @@ body.drawer-open {
     height: 200px;
     bottom: 10%;
     right: 5%;
-    opacity: 0.06;
+    opacity: 0.12;
     animation: subtle-float 42s ease-in-out infinite;
     animation-delay: -15s;
 }
@@ -1352,7 +1352,7 @@ body.drawer-open {
     height: 300px;
     top: 5%;
     left: 15%;
-    opacity: 0.03;
+    opacity: 0.08;
 }
 
 /* Subtle float animation for illustrations */
