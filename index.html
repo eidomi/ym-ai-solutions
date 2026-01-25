@@ -43,7 +43,7 @@
         />
         <meta
             property="og:image"
-            content="https://ym-ai-solutions.vercel.app/og-image.png"
+            content="https://ym-ai-solutions.vercel.app/og-image.svg"
         />
         <meta property="og:locale" content="he_IL" />
         <meta property="og:locale:alternate" content="en_US" />
@@ -61,7 +61,7 @@
         />
         <meta
             name="twitter:image"
-            content="https://ym-ai-solutions.vercel.app/og-image.png"
+            content="https://ym-ai-solutions.vercel.app/og-image.svg"
         />
 
         <!-- Canonical & Language Alternates -->
@@ -100,26 +100,16 @@
             {
                 "@context": "https://schema.org",
                 "@type": "ProfessionalService",
+                "@id": "https://ym-ai-solutions.vercel.app/#organization",
                 "name": "YM AI Solutions",
                 "alternateName": "יהודה מזרחי AI Solutions",
                 "url": "https://ym-ai-solutions.vercel.app",
-                "logo": "https://ym-ai-solutions.vercel.app/ym-ai-logo.svg",
-                "image": "https://ym-ai-solutions.vercel.app/og-image.png",
+                "logo": "https://ym-ai-solutions.vercel.app/ym-ai-logo-icon.svg",
+                "image": "https://ym-ai-solutions.vercel.app/og-image.svg",
                 "description": "Custom AI agent development for business automation and optimization. סוכני AI שמייעלים את הניהול העסקי שלך.",
                 "foundingDate": "2024",
                 "founder": {
-                    "@type": "Person",
-                    "name": "Yehuda Mizrahi",
-                    "alternateName": "יהודה מזרחי",
-                    "jobTitle": "AI Solutions Architect",
-                    "knowsAbout": [
-                        "AI Agents",
-                        "Business Automation",
-                        "SaaS Development",
-                        "Claude AI",
-                        "Machine Learning"
-                    ],
-                    "description": "8.5 years software development experience, former development team lead"
+                    "@id": "https://ym-ai-solutions.vercel.app/#founder"
                 },
                 "areaServed": ["Israel", "Worldwide"],
                 "serviceType": [
@@ -136,7 +126,7 @@
                     "Pension Systems"
                 ],
                 "sameAs": [
-                    "https://linkedin.com/in/yehudamizrahi",
+                    "https://www.linkedin.com/in/yehudamizrahi",
                     "https://github.com/yehudapro"
                 ],
                 "contactPoint": {
@@ -154,10 +144,11 @@
             {
                 "@context": "https://schema.org",
                 "@type": "Service",
+                "@id": "https://ym-ai-solutions.vercel.app/#services",
+                "url": "https://ym-ai-solutions.vercel.app/#services",
                 "serviceType": "AI Agent Development",
                 "provider": {
-                    "@type": "ProfessionalService",
-                    "name": "YM AI Solutions"
+                    "@id": "https://ym-ai-solutions.vercel.app/#organization"
                 },
                 "areaServed": "Worldwide",
                 "hasOfferCatalog": {
@@ -256,12 +247,12 @@
             {
                 "@context": "https://schema.org",
                 "@type": "Person",
+                "@id": "https://ym-ai-solutions.vercel.app/#founder",
                 "name": "Yehuda Mizrahi",
                 "alternateName": "יהודה מזרחי",
                 "jobTitle": "AI Solutions Architect & Developer",
                 "worksFor": {
-                    "@type": "Organization",
-                    "name": "YM AI Solutions"
+                    "@id": "https://ym-ai-solutions.vercel.app/#organization"
                 },
                 "knowsAbout": [
                     "Artificial Intelligence",
@@ -275,7 +266,10 @@
                     "@type": "EducationalOccupationalCredential",
                     "name": "8.5 Years Professional Software Development Experience"
                 },
-                "alumniOf": "Development Team Lead Experience",
+                "alumniOf": {
+                    "@type": "Organization",
+                    "name": "Insurance Industry (Development Team Lead)"
+                },
                 "url": "https://ym-ai-solutions.vercel.app"
             }
         </script>
@@ -285,8 +279,13 @@
             {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
+                "@id": "https://ym-ai-solutions.vercel.app/#webpage",
+                "url": "https://ym-ai-solutions.vercel.app",
                 "name": "YM AI Solutions - AI Agents for Business",
                 "description": "Custom AI agent development for business automation",
+                "mainEntity": {
+                    "@id": "https://ym-ai-solutions.vercel.app/#organization"
+                },
                 "speakable": {
                     "@type": "SpeakableSpecification",
                     "cssSelector": [
