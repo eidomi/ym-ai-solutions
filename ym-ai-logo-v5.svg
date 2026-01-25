@@ -1,17 +1,17 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background -->
-    <rect width="512" height="512" fill="#000000"/>
+    <!-- Background - Warm Cream -->
+    <rect width="512" height="512" fill="#F7F5F2"/>
 
-    <!-- Gradient for subtle accent -->
+    <!-- Gradient for subtle accent - Warm tones -->
     <defs>
         <linearGradient id="coreAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0.7" />
-            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:0.7" />
+            <stop offset="0%" style="stop-color:#C4856A;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#D4A088;stop-opacity:0.9" />
         </linearGradient>
     </defs>
 
     <!-- Organic Neural Mesh Shape - Preserving 10-point symmetry -->
-    <g transform="translate(256, 170)" fill="none" stroke="#ffffff">
+    <g transform="translate(256, 170)" fill="none" stroke="#2D2D2D">
 
         <!-- Outer petals - large overlapping ellipses rotated around center -->
         <g stroke-width="0.9" opacity="0.9">
@@ -58,8 +58,8 @@
             <ellipse cx="0" cy="0" rx="10" ry="24" transform="rotate(144)"/>
         </g>
 
-        <!-- Core - with subtle accent color -->
-        <g stroke="url(#coreAccent)" stroke-width="0.8" opacity="0.6">
+        <!-- Core - with warm accent color -->
+        <g stroke="url(#coreAccent)" stroke-width="0.8" opacity="0.8">
             <ellipse cx="0" cy="0" rx="6" ry="15"/>
             <ellipse cx="0" cy="0" rx="6" ry="15" transform="rotate(36)"/>
             <ellipse cx="0" cy="0" rx="6" ry="15" transform="rotate(72)"/>
@@ -68,25 +68,25 @@
         </g>
 
         <!-- Tiny center dot with accent -->
-        <circle cx="0" cy="0" r="1.5" fill="url(#coreAccent)" opacity="0.8"/>
+        <circle cx="0" cy="0" r="1.5" fill="url(#coreAccent)" opacity="0.9"/>
 
     </g>
 
-    <!-- YM Text - Slightly more prominent -->
+    <!-- YM Text - Charcoal Gray -->
     <text x="256" y="318"
           font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
           font-size="44"
           font-weight="300"
-          fill="#ffffff"
+          fill="#2D2D2D"
           text-anchor="middle"
           letter-spacing="10">YM</text>
 
-    <!-- ARTIFICIAL INTELLIGENCE Text - Readable size -->
+    <!-- ARTIFICIAL INTELLIGENCE Text - Medium Gray -->
     <text x="256" y="354"
           font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
           font-size="13"
           font-weight="300"
-          fill="#ffffff"
+          fill="#6B6B6B"
           text-anchor="middle"
           letter-spacing="3.5"
           opacity="0.85">ARTIFICIAL INTELLIGENCE</text>
