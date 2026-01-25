@@ -43,8 +43,10 @@
         />
         <meta
             property="og:image"
-            content="https://mindellect.com/og-image.svg"
+            content="https://mindellect.com/og-image.jpg"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="he_IL" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:site_name" content="YM AI Solutions" />
@@ -61,8 +63,9 @@
         />
         <meta
             name="twitter:image"
-            content="https://mindellect.com/og-image.svg"
+            content="https://mindellect.com/og-image.jpg"
         />
+        <meta name="twitter:domain" content="mindellect.com" />
 
         <!-- Canonical & Language Alternates -->
         <link rel="canonical" href="https://mindellect.com/" />
@@ -122,6 +125,9 @@
         <!-- Schema.org Structured Data - BreadcrumbList -->
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mindellect.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://mindellect.com/#services"},{"@type":"ListItem","position":3,"name":"Contact","item":"https://mindellect.com/#contact"}]}</script>
 
+        <!-- Schema.org Structured Data - LocalBusiness -->
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"YM AI Solutions","address":{"@type":"PostalAddress","addressCountry":"IL"},"telephone":"+972-54-402-0091","email":"ym-ai-solutions@gmail.com","url":"https://mindellect.com","priceRange":"$$"}</script>
+
         <link rel="stylesheet" href="styles.css" />
         <!-- CSS moved to styles.css -->
     </head>
@@ -136,12 +142,12 @@
 
         <!-- Line-Art AI Workflow Illustrations -->
         <div class="illustration-layer">
-            <svg class="workflow-node workflow-node-1"><use href="illustrations.svg#workflow-node-1"></use></svg>
-            <svg class="workflow-node workflow-node-2"><use href="illustrations.svg#workflow-node-2"></use></svg>
-            <svg class="workflow-node workflow-node-3"><use href="illustrations.svg#workflow-node-3"></use></svg>
-            <svg class="connection-lines"><use href="illustrations.svg#connection-lines"></use></svg>
-            <svg class="flow-circle"><use href="illustrations.svg#flow-circle"></use></svg>
-            <svg class="data-flow"><use href="illustrations.svg#data-flow"></use></svg>
+            <svg class="workflow-node workflow-node-1" role="img" aria-label="AI workflow automation node"><use href="illustrations.svg#workflow-node-1"></use></svg>
+            <svg class="workflow-node workflow-node-2" role="img" aria-label="AI processing workflow node"><use href="illustrations.svg#workflow-node-2"></use></svg>
+            <svg class="workflow-node workflow-node-3" role="img" aria-label="AI output workflow node"><use href="illustrations.svg#workflow-node-3"></use></svg>
+            <svg class="connection-lines" role="img" aria-label="Workflow connection lines"><use href="illustrations.svg#connection-lines"></use></svg>
+            <svg class="flow-circle" role="img" aria-label="Data flow indicator"><use href="illustrations.svg#flow-circle"></use></svg>
+            <svg class="data-flow" role="img" aria-label="AI data flow visualization"><use href="illustrations.svg#data-flow"></use></svg>
         </div>
 
         <!-- Navigation -->
@@ -151,6 +157,7 @@
                     src="ym-ai-logo-icon.svg"
                     alt="YM AI Logo"
                     class="logo-icon"
+                    loading="lazy"
                 />
                 <span class="logo-text">YM AI Solutions</span>
             </a>
@@ -1244,6 +1251,6 @@
             </p>
         </footer>
 
-        <script src="main.js"></script>
+        <script src="main.js" defer></script>
     </body>
 </html>
