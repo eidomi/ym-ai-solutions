@@ -4,7 +4,7 @@
     --bg-secondary: rgba(255, 255, 255, 0.5);
     --bg-card: rgba(255, 255, 255, 0.45);
     --text-primary: #2C2825;
-    --text-secondary: #9B9386;
+    --text-secondary: #7A7265;
     --accent-primary: #C4856A;
     --accent-secondary: #D4A088;
     --accent-gradient: linear-gradient(
@@ -14,6 +14,12 @@
     );
     --border-color: rgba(196, 133, 106, 0.15);
     --glow: 0 8px 32px rgba(196, 133, 106, 0.12);
+
+    /* CTA Accent - Deep Teal for primary buttons */
+    --accent-cta: #2A6B6B;
+    --accent-cta-hover: #1F5252;
+    --accent-cta-glow: rgba(42, 107, 107, 0.25);
+    --accent-cta-glow-hover: rgba(42, 107, 107, 0.35);
 
     /* Glass effect tokens */
     --glass-bg: rgba(247, 245, 242, 0.4);
@@ -57,8 +63,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Noise/Grain texture overlay for warm organic aesthetic */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
 body.en {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     direction: ltr;
 }
 
@@ -431,7 +451,7 @@ body.en .hero h1 {
 }
 
 .btn-primary {
-    background: var(--accent-gradient);
+    background: var(--accent-cta);
     color: #fff;
     padding: 1rem 2rem;
     border-radius: 12px;
@@ -442,12 +462,13 @@ body.en .hero h1 {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 20px rgba(196, 133, 106, 0.25);
+    box-shadow: 0 4px 20px var(--accent-cta-glow);
 }
 
 .btn-primary:hover {
+    background: var(--accent-cta-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(196, 133, 106, 0.35);
+    box-shadow: 0 8px 30px var(--accent-cta-glow-hover);
 }
 
 .btn-secondary {
@@ -488,10 +509,40 @@ body.en .hero h1 {
     transform: translateY(-50%);
     width: clamp(200px, 30vw, 380px);
     color: var(--accent-primary);
-    opacity: 0.20;
+    opacity: 0.40;
     z-index: 1;
     pointer-events: none;
     animation: hero-illustration-float 30s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(196, 133, 106, 0.15));
+}
+
+/* Animated circuit traces in hero illustration */
+.hero-illustration .circuit-trace {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: trace-draw 3s ease-out forwards infinite;
+}
+
+@keyframes trace-draw {
+    0% { stroke-dashoffset: 100; opacity: 0.3; }
+    50% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: -100; opacity: 0.3; }
+}
+
+/* Pulsing glow for circuit nodes */
+.hero-illustration .circuit-node {
+    animation: node-pulse 2s ease-in-out infinite;
+}
+
+@keyframes node-pulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 2px rgba(196, 133, 106, 0.4));
+        opacity: 0.7;
+    }
+    50% {
+        filter: drop-shadow(0 0 8px rgba(196, 133, 106, 0.8));
+        opacity: 1;
+    }
 }
 
 @keyframes hero-illustration-float {
@@ -514,14 +565,14 @@ body.en .hero h1 {
 @media (min-width: 480px) and (max-width: 767px) {
     .hero-illustration {
         width: 28vw;
-        opacity: 0.12;
+        opacity: 0.28;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .hero-illustration {
         width: 28vw;
-        opacity: 0.16;
+        opacity: 0.35;
     }
 }
 
@@ -536,7 +587,19 @@ body.en .hero h1 {
 
 .stat-item {
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.stat-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-item:nth-child(1) { transition-delay: 0s; }
+.stat-item:nth-child(2) { transition-delay: 0.15s; }
+.stat-item:nth-child(3) { transition-delay: 0.3s; }
 
 .stat-number {
     font-size: 2.5rem;
@@ -546,6 +609,17 @@ body.en .hero h1 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family: 'Inter', sans-serif;
+}
+
+/* Animated counter scale effect */
+.stat-number.counting {
+    animation: stat-pop 0.3s ease-out;
+}
+
+@keyframes stat-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .stat-label {
@@ -711,6 +785,38 @@ body.en .timeline-item::before {
 
 .service-card:hover::before {
     transform: scaleX(1);
+}
+
+/* Gradient shimmer effect on service card hover */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::after {
+    left: 100%;
+}
+
+/* Service icon bounce animation on card hover */
+.service-card:hover .service-icon svg {
+    animation: icon-bounce 0.4s ease;
+}
+
+@keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 .service-icon {
@@ -904,11 +1010,13 @@ body.en .cta-section h2 {
 
 .faq-item h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0;
     color: var(--text-primary);
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 .faq-item h3::before {
@@ -923,13 +1031,41 @@ body.en .cta-section h2 {
     font-size: 0.85rem;
     font-weight: 700;
     color: #fff;
+    flex-shrink: 0;
 }
 
+/* Accordion toggle indicator */
+.faq-item h3::after {
+    content: '+';
+    margin-inline-start: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--accent-primary);
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.faq-item.open h3::after {
+    transform: rotate(45deg);
+}
+
+/* FAQ answer with accordion animation - using max-height for SEO crawlability */
 .faq-item p {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     padding-right: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    padding-top: 0;
+    opacity: 0;
+}
+
+.faq-item.open p {
+    max-height: 500px;
+    padding-top: 0.8rem;
+    opacity: 1;
 }
 
 body.en .faq-item p {
@@ -1241,6 +1377,24 @@ section {
     .ambient-orb {
         animation: none;
     }
+
+    /* Ensure stats are visible without animation */
+    .stat-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Disable circuit animations */
+    .hero-illustration .circuit-trace,
+    .hero-illustration .circuit-node {
+        animation: none;
+        opacity: 1;
+    }
+
+    /* Disable service card shimmer */
+    .service-card::after {
+        display: none;
+    }
 }
 
 /* Prevent body scroll when drawer open */
@@ -1300,14 +1454,14 @@ body.drawer-open {
 .workflow-node-1 {
     top: 15%;
     right: 8%;
-    opacity: 0.18;
+    opacity: 0.25;
     animation: subtle-float 35s ease-in-out infinite;
 }
 
 .workflow-node-2 {
     bottom: 25%;
     left: 5%;
-    opacity: 0.15;
+    opacity: 0.22;
     width: 150px;
     height: 150px;
     animation: subtle-float 40s ease-in-out infinite;
@@ -1317,7 +1471,7 @@ body.drawer-open {
 .workflow-node-3 {
     top: 60%;
     right: 12%;
-    opacity: 0.12;
+    opacity: 0.18;
     width: 100px;
     height: 100px;
     animation: subtle-float 38s ease-in-out infinite;
@@ -1331,7 +1485,7 @@ body.drawer-open {
     height: 200px;
     top: 35%;
     left: 3%;
-    opacity: 0.12;
+    opacity: 0.18;
 }
 
 .flow-circle {
@@ -1340,7 +1494,7 @@ body.drawer-open {
     height: 200px;
     bottom: 10%;
     right: 5%;
-    opacity: 0.14;
+    opacity: 0.20;
     animation: subtle-float 42s ease-in-out infinite;
     animation-delay: -15s;
 }
@@ -1352,7 +1506,7 @@ body.drawer-open {
     height: 300px;
     top: 5%;
     left: 15%;
-    opacity: 0.10;
+    opacity: 0.15;
 }
 
 /* Subtle float animation for illustrations */

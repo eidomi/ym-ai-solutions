@@ -85,8 +85,13 @@
         <link rel="icon" type="image/svg+xml" href="ym-ai-logo-icon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=Heebo:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap"
             rel="stylesheet"
         />
 
@@ -470,21 +475,25 @@
                         <line x1="140" y1="90" x2="140" y2="360" stroke="currentColor" stroke-width="0.75"/>
                         <line x1="170" y1="90" x2="170" y2="360" stroke="currentColor" stroke-width="0.75"/>
 
-                        <!-- Circuit nodes -->
-                        <circle cx="110" cy="120" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="140" cy="160" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="170" cy="200" r="5" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="110" cy="240" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="140" cy="280" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="170" cy="320" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <!-- Circuit nodes with pulsing animation -->
+                        <circle class="circuit-node" cx="110" cy="120" r="4" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <circle class="circuit-node" cx="140" cy="160" r="4" stroke="currentColor" stroke-width="1" fill="none" style="animation-delay: 0.3s"/>
+                        <circle class="circuit-node" cx="170" cy="200" r="5" stroke="currentColor" stroke-width="1" fill="none" style="animation-delay: 0.6s"/>
+                        <circle class="circuit-node" cx="110" cy="240" r="4" stroke="currentColor" stroke-width="1" fill="none" style="animation-delay: 0.9s"/>
+                        <circle class="circuit-node" cx="140" cy="280" r="4" stroke="currentColor" stroke-width="1" fill="none" style="animation-delay: 1.2s"/>
+                        <circle class="circuit-node" cx="170" cy="320" r="4" stroke="currentColor" stroke-width="1" fill="none" style="animation-delay: 1.5s"/>
                         <circle cx="140" cy="120" r="3" stroke="currentColor" stroke-width="0.75" fill="none"/>
                         <circle cx="170" cy="160" r="3" stroke="currentColor" stroke-width="0.75" fill="none"/>
                         <circle cx="110" cy="200" r="3" stroke="currentColor" stroke-width="0.75" fill="none"/>
                         <circle cx="170" cy="280" r="3" stroke="currentColor" stroke-width="0.75" fill="none"/>
 
-                        <!-- Connection traces -->
-                        <path d="M110 124 L110 156 M140 164 L140 196 M170 204 L170 236" stroke="currentColor" stroke-width="1"/>
-                        <path d="M114 120 L136 120 M144 160 L166 160 M114 240 L136 280" stroke="currentColor" stroke-width="1"/>
+                        <!-- Connection traces with animation -->
+                        <path class="circuit-trace" d="M110 124 L110 156" stroke="currentColor" stroke-width="1"/>
+                        <path class="circuit-trace" d="M140 164 L140 196" stroke="currentColor" stroke-width="1" style="animation-delay: 0.5s"/>
+                        <path class="circuit-trace" d="M170 204 L170 236" stroke="currentColor" stroke-width="1" style="animation-delay: 1s"/>
+                        <path class="circuit-trace" d="M114 120 L136 120" stroke="currentColor" stroke-width="1" style="animation-delay: 0.25s"/>
+                        <path class="circuit-trace" d="M144 160 L166 160" stroke="currentColor" stroke-width="1" style="animation-delay: 0.75s"/>
+                        <path class="circuit-trace" d="M114 240 L136 280" stroke="currentColor" stroke-width="1" style="animation-delay: 1.25s"/>
                     </g>
 
                     <!-- RIGHT HALF: Organic brain folds -->
@@ -1288,6 +1297,110 @@
                     }
                 });
             });
+
+            // Stats Row animation with counter effect
+            function initStatsAnimation() {
+                const statsRow = document.querySelector('.stats-row');
+                const statItems = document.querySelectorAll('.stat-item');
+                const statNumbers = document.querySelectorAll('.stat-number');
+                let hasAnimated = false;
+
+                // Extract target values from stat numbers
+                const targetValues = [];
+                statNumbers.forEach((num) => {
+                    const text = num.textContent.trim();
+                    const value = parseFloat(text.replace(/[^0-9.]/g, ''));
+                    const suffix = text.replace(/[0-9.]/g, '');
+                    targetValues.push({ value, suffix, element: num });
+                });
+
+                function animateCounter(element, targetValue, suffix, duration = 1500) {
+                    const startTime = performance.now();
+                    const startValue = 0;
+
+                    function update(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+
+                        // Easing function (ease-out cubic)
+                        const easeOut = 1 - Math.pow(1 - progress, 3);
+                        const currentValue = startValue + (targetValue - startValue) * easeOut;
+
+                        // Format the number
+                        if (Number.isInteger(targetValue)) {
+                            element.textContent = Math.round(currentValue) + suffix;
+                        } else {
+                            element.textContent = currentValue.toFixed(1) + suffix;
+                        }
+
+                        if (progress < 1) {
+                            requestAnimationFrame(update);
+                        } else {
+                            element.classList.add('counting');
+                            setTimeout(() => element.classList.remove('counting'), 300);
+                        }
+                    }
+
+                    requestAnimationFrame(update);
+                }
+
+                const statsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting && !hasAnimated) {
+                            hasAnimated = true;
+
+                            // Make stat items visible with stagger
+                            statItems.forEach((item) => {
+                                item.classList.add('visible');
+                            });
+
+                            // Start counter animations
+                            targetValues.forEach(({ value, suffix, element }, index) => {
+                                setTimeout(() => {
+                                    animateCounter(element, value, suffix);
+                                }, index * 150);
+                            });
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                if (statsRow) {
+                    statsObserver.observe(statsRow);
+                }
+            }
+
+            initStatsAnimation();
+
+            // FAQ Accordion functionality with accessibility
+            function initFAQAccordion() {
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach((item) => {
+                    const header = item.querySelector('h3');
+
+                    // Add accessibility attributes
+                    header.setAttribute('role', 'button');
+                    header.setAttribute('aria-expanded', 'false');
+                    header.setAttribute('tabindex', '0');
+
+                    // Click handler
+                    header.addEventListener('click', () => {
+                        const isOpen = item.classList.toggle('open');
+                        header.setAttribute('aria-expanded', isOpen);
+                    });
+
+                    // Keyboard handler (Enter and Space)
+                    header.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            const isOpen = item.classList.toggle('open');
+                            header.setAttribute('aria-expanded', isOpen);
+                        }
+                    });
+                });
+            }
+
+            initFAQAccordion();
         </script>
     </body>
 </html>
