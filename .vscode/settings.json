@@ -28,7 +28,7 @@
   
   // Live Server Settings
   "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.port": 5500,
+  "liveServer.settings.port": 5501,
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.NoBrowser": false,
   "liveServer.settings.ignoreFiles": [
