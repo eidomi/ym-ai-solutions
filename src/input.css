@@ -651,7 +651,12 @@
   }
 
   .nav-links a:not(.lang-toggle) {
-    @apply block;
+    @apply inline-block;
+  }
+
+  /* Hide mobile drawer on desktop */
+  .mobile-nav-drawer {
+    @apply hidden;
   }
 
   .hero-illustration {
