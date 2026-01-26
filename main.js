@@ -231,21 +231,42 @@ function initStatsAnimation() {
     const statNumbers = document.querySelectorAll('.stat-number');
     let hasAnimated = false;
 
+    // LRM character for RTL support
+    const LRM = '\u200E';
+
+    // Wrap text in LTR span for proper RTL display
+    function wrapLTR(text) {
+        return LRM + text;
+    }
+
     // Extract target values from stat numbers
     const targetValues = [];
     statNumbers.forEach((num) => {
-        const text = num.textContent.trim();
-        const value = parseFloat(text.replace(/[^0-9.]/g, ''));
-        const suffix = text.replace(/[0-9.]/g, '');
-        targetValues.push({ value, suffix, element: num });
+        const text = num.textContent.trim().replace(/\u200E/g, ''); // Remove existing LRM
+
+        // Check if it's a simple number+suffix format (e.g., "70%")
+        const simpleMatch = text.match(/^(\d+(?:\.\d+)?)(%.*)$/);
+
+        if (simpleMatch) {
+            // Simple format: animate the number
+            targetValues.push({
+                type: 'animated',
+                value: parseFloat(simpleMatch[1]),
+                suffix: simpleMatch[2],
+                element: num,
+                originalText: text
+            });
+        } else {
+            // Complex format (24/7, 2-4): don't animate, just display with LRM
+            targetValues.push({
+                type: 'static',
+                element: num,
+                originalText: text
+            });
+        }
     });
 
-    function animateCounter(
-        element,
-        targetValue,
-        suffix,
-        duration = 1500,
-    ) {
+    function animateCounter(element, targetValue, suffix, duration = 1500) {
         const startTime = performance.now();
         const startValue = 0;
 
@@ -255,26 +276,20 @@ function initStatsAnimation() {
 
             // Easing function (ease-out cubic)
             const easeOut = 1 - Math.pow(1 - progress, 3);
-            const currentValue =
-                startValue + (targetValue - startValue) * easeOut;
+            const currentValue = startValue + (targetValue - startValue) * easeOut;
 
-            // Format the number
+            // Format the number with LRM for RTL support
             if (Number.isInteger(targetValue)) {
-                element.textContent =
-                    Math.round(currentValue) + suffix;
+                element.textContent = wrapLTR(Math.round(currentValue) + suffix);
             } else {
-                element.textContent =
-                    currentValue.toFixed(1) + suffix;
+                element.textContent = wrapLTR(currentValue.toFixed(1) + suffix);
             }
 
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
                 element.classList.add('counting');
-                setTimeout(
-                    () => element.classList.remove('counting'),
-                    300,
-                );
+                setTimeout(() => element.classList.remove('counting'), 300);
             }
         }
 
@@ -292,18 +307,19 @@ function initStatsAnimation() {
                         item.classList.add('visible');
                     });
 
-                    // Start counter animations
-                    targetValues.forEach(
-                        ({ value, suffix, element }, index) => {
-                            setTimeout(() => {
-                                animateCounter(
-                                    element,
-                                    value,
-                                    suffix,
-                                );
-                            }, index * 150);
-                        },
-                    );
+                    // Start animations
+                    targetValues.forEach((stat, index) => {
+                        setTimeout(() => {
+                            if (stat.type === 'animated') {
+                                animateCounter(stat.element, stat.value, stat.suffix);
+                            } else {
+                                // Static: just set text with LRM wrapper
+                                stat.element.textContent = wrapLTR(stat.originalText);
+                                stat.element.classList.add('counting');
+                                setTimeout(() => stat.element.classList.remove('counting'), 300);
+                            }
+                        }, index * 150);
+                    });
                 }
             });
         },
