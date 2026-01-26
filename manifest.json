@@ -1,6 +1,6 @@
 {
-  "name": "YM AI Solutions - AI Agents for Business",
-  "short_name": "YM AI",
+  "name": "Mindellect AI Solutions - AI Agents for Business",
+  "short_name": "Mindellect",
   "description": "Custom AI agent development for business automation. Serving Hebrew and English speakers worldwide.",
   "start_url": "/",
   "display": "standalone",
@@ -24,7 +24,7 @@
       "sizes": "1200x630",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "YM AI Solutions Homepage"
+      "label": "Mindellect AI Solutions Homepage"
     }
   ]
 }

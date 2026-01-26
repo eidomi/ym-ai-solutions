@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-YM AI Solutions - A bilingual (Hebrew/English) single-page marketing website built with Tailwind CSS and SVG icon system.
+Mindellect AI Solutions - A bilingual (Hebrew/English) single-page marketing website built with Tailwind CSS and SVG icon system.
 
 ## Development
 

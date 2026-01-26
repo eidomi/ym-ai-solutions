@@ -1,4 +1,4 @@
-# YM AI Solutions - Yehuda Mizrachi
+# Mindellect AI Solutions - Yehuda Mizrachi
 
 A modern, bilingual (Hebrew/English) website showcasing AI solutions and services by Yehuda Mizrachi.
 

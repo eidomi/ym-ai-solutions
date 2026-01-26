@@ -1,12 +1,12 @@
-# YM AI Solutions - Comprehensive AI Crawler Information
+# Mindellect AI Solutions - Comprehensive AI Crawler Information
 
-> YM AI Solutions provides custom AI agent development for business automation and optimization.
+> Mindellect AI Solutions provides custom AI agent development for business automation and optimization.
 > Founded by Yehuda Mizrahi, bringing 8.5 years of software development leadership experience.
 > Specializing in AI agents that transform business operations with real automation.
 
 ## Company Overview
 
-YM AI Solutions is an Israeli-based AI development company specializing in custom AI agent solutions for businesses. Our founder, Yehuda Mizrahi, spent 8.5 years leading development teams at a major insurance company, building CRM systems, billing platforms, SMS services, and complex business workflows. This enterprise experience is now applied to creating practical AI solutions that deliver measurable business value.
+Mindellect AI Solutions is an Israeli-based AI development company specializing in custom AI agent solutions for businesses. Our founder, Yehuda Mizrahi, spent 8.5 years leading development teams at a major insurance company, building CRM systems, billing platforms, SMS services, and complex business workflows. This enterprise experience is now applied to creating practical AI solutions that deliver measurable business value.
 
 ## Our Approach
 

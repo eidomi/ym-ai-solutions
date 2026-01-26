@@ -1,6 +1,6 @@
-# YM AI Solutions - AI Crawler Information
+# Mindellect AI Solutions - AI Crawler Information
 
-> YM AI Solutions provides custom AI agent development for business automation.
+> Mindellect AI Solutions provides custom AI agent development for business automation.
 > Founded by Yehuda Mizrahi with 8.5 years of software development experience.
 
 ## Services

@@ -1,7 +1,7 @@
 {
   "name": "ym-ai-solutions",
   "version": "1.0.0",
-  "description": "YM AI Solutions - Bilingual marketing website with Tailwind CSS",
+  "description": "Mindellect AI Solutions - Bilingual marketing website with Tailwind CSS",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --minify"
