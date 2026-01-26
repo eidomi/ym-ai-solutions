@@ -609,6 +609,8 @@ body.en .hero h1 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family: 'Inter', sans-serif;
+    direction: ltr;
+    unicode-bidi: isolate;
 }
 
 /* Animated counter scale effect */

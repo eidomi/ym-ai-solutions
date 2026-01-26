@@ -1,0 +1,113 @@
+/* ========================================
+   COMPLEX KEYFRAME ANIMATIONS
+   Complex multi-step animations that benefit from
+   being in a separate file for maintainability
+   ======================================== */
+
+/* Float animation for ambient orbs - 25s duration */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+/* Fade in up for hero elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse for badge dot */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Hero illustration floating - 30s duration */
+@keyframes hero-illustration-float {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% - 12px));
+  }
+}
+
+/* Circuit trace drawing animation */
+@keyframes trace-draw {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0.3;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0.3;
+  }
+}
+
+/* Circuit node pulsing glow */
+@keyframes node-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(196, 133, 106, 0.4));
+    opacity: 0.7;
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(196, 133, 106, 0.8));
+    opacity: 1;
+  }
+}
+
+/* Subtle float for background illustrations - 35-42s */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Icon bounce on service card hover */
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Stat number pop when counting */
+@keyframes stat-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

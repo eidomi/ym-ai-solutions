@@ -20,7 +20,7 @@
         <title>סוכני AI לעסקים | YM AI Solutions - אוטומציה חכמה</title>
         <meta
             name="description"
-            content="פיתוח סוכני AI מותאמים לעסקים בישראל | אוטומציה עסקית, צ'אטבוטים חכמים, עיבוד מסמכים. 8.5 שנות ניסיון. ייעוץ חינם!"
+            content="פיתוח סוכני AI מותאמים לעסקים בישראל | אוטומציה עסקית, צ'אטבוטים חכמים, עיבוד מסמכים. 9 שנות ניסיון. ייעוץ חינם!"
         />
         <meta
             name="keywords"
@@ -62,7 +62,7 @@
         />
         <meta
             name="twitter:description"
-            content="פיתוח סוכני AI מותאמים לעסקים | אוטומציה עסקית, צ'אטבוטים חכמים. 8.5 שנות ניסיון. ייעוץ חינם!"
+            content="פיתוח סוכני AI מותאמים לעסקים | אוטומציה עסקית, צ'אטבוטים חכמים. 9 שנות ניסיון. ייעוץ חינם!"
         />
         <meta
             name="twitter:image"
@@ -92,7 +92,7 @@
         <link rel="manifest" href="manifest.json" />
 
         <!-- Resource Hints -->
-        <link rel="preload" href="styles.css" as="style" />
+        <link rel="preload" href="dist/styles.css" as="style" />
         <link rel="preload" href="main.js" as="script" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -273,7 +273,7 @@
                 ],
                 "hasCredential": {
                     "@type": "EducationalOccupationalCredential",
-                    "name": "8.5 Years Professional Software Development Experience"
+                    "name": "9 Years Professional Software Development Experience"
                 },
                 "alumniOf": {
                     "@type": "Organization",
@@ -346,8 +346,8 @@
             }
         </script>
 
-        <link rel="stylesheet" href="styles.css" />
-        <!-- CSS moved to styles.css -->
+        <link rel="stylesheet" href="dist/styles.css" />
+        <!-- CSS built with Tailwind - source in src/input.css -->
     </head>
     <body>
         <!-- Ambient Background -->
@@ -405,12 +405,12 @@
         </div>
 
         <!-- Navigation -->
-        <nav>
-            <a href="#" class="logo">
+        <nav class="glass-nav fixed inset-x-0 top-0 z-[100] flex justify-between items-center min-h-nav lg:min-h-nav-lg px-4 lg:px-8 pt-safe-top">
+            <a href="#" class="logo flex items-center gap-2 no-underline">
                 <img
                     src="ym-ai-logo-icon.svg"
                     alt="YM AI Logo"
-                    class="logo-icon"
+                    class="logo-icon w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] xl:w-20 xl:h-20 object-contain"
                     loading="lazy"
                 />
                 <span class="logo-text">Mindellect AI</span>
@@ -424,14 +424,14 @@
                 <span></span>
                 <span></span>
             </button>
-            <div class="nav-links">
-                <a href="#about" data-he="אודות" data-en="About">אודות</a>
-                <a href="#services" data-he="שירותים" data-en="Services"
+            <div class="nav-links flex items-center gap-8 lg:gap-3">
+                <a href="#about" class="text-text-secondary no-underline text-base hover:text-accent-primary transition-colors duration-300" data-he="אודות" data-en="About">אודות</a>
+                <a href="#services" class="text-text-secondary no-underline text-base hover:text-accent-primary transition-colors duration-300" data-he="שירותים" data-en="Services"
                     >שירותים</a
                 >
-                <a href="#proof" data-he="הוכחה" data-en="Proof">הוכחה</a>
-                <a href="#faq" data-he="שאלות" data-en="FAQ">שאלות</a>
-                <a href="#contact" data-he="צור קשר" data-en="Contact"
+                <a href="#proof" class="text-text-secondary no-underline text-base hover:text-accent-primary transition-colors duration-300" data-he="הוכחה" data-en="Proof">הוכחה</a>
+                <a href="#faq" class="text-text-secondary no-underline text-base hover:text-accent-primary transition-colors duration-300" data-he="שאלות" data-en="FAQ">שאלות</a>
+                <a href="#contact" class="text-text-secondary no-underline text-base hover:text-accent-primary transition-colors duration-300" data-he="צור קשר" data-en="Contact"
                     >צור קשר</a
                 >
                 <button class="lang-toggle" onclick="toggleLanguage()">
@@ -450,9 +450,9 @@
         </div>
         <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-        <main>
+        <main class="relative z-[2]">
             <!-- Hero Section -->
-            <section class="hero">
+            <section class="hero relative flex flex-col justify-center min-h-dvh pt-nav lg:pt-nav-lg px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-[1200px] mx-auto">
                 <!-- Hero Illustration: AI-Human Collaboration -->
                 <svg
                     class="hero-illustration"
@@ -986,7 +986,7 @@
                     </svg>
                     <span>Automating Excellence</span>
                 </div>
-                <h1>
+                <h1 class="text-4xl sm:text-5xl xl:text-6xl font-semibold leading-tight mb-6 opacity-0 animate-fade-in-up animate-delay-200">
                     <span
                         data-he="נמאס לבזבז שעות על משימות שחוזרות על עצמן?"
                         data-en="Tired of wasting hours on repetitive tasks?"
@@ -1000,7 +1000,7 @@
                     >
                 </h1>
                 <p
-                    class="hero-subtitle"
+                    class="hero-subtitle text-lg sm:text-xl text-[#6B6B6B] max-w-[600px] mb-10 opacity-0 animate-fade-in-up animate-delay-400"
                     data-he="70% מהמשימות היומיות יכולות לרוץ אוטומטית. תקשורת עם לקוחות, דוחות, תיאומים - הכל בלי שתיגעו. תתמקדו בצמיחה, לא בשריפת זמן."
                     data-en="70% of daily tasks can run automatically. Customer communication, reports, scheduling - all hands-free. Focus on growth, not busywork."
                 >
@@ -1008,8 +1008,8 @@
                     דוחות, תיאומים - הכל בלי שתיגעו. תתמקדו בצמיחה, לא בשריפת
                     זמן.
                 </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">
+                <div class="hero-cta flex flex-col lg:flex-row gap-4 flex-wrap opacity-0 animate-fade-in-up animate-delay-600">
+                    <a href="#contact" class="btn-primary w-full lg:w-auto justify-center">
                         <span
                             data-he="גלו כמה תחסכו"
                             data-en="Discover Your Savings"
@@ -1021,15 +1021,15 @@
                     </a>
                     <a
                         href="#proof"
-                        class="btn-secondary"
+                        class="btn-secondary w-full lg:w-auto text-center"
                         data-he="ראו איך זה עובד"
                         data-en="See How It Works"
                         >ראו איך זה עובד</a
                     >
                 </div>
 
-                <div class="stats-row">
-                    <div class="stat-item">
+                <div class="stats-row grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-20 pt-12 border-t border-border-subtle">
+                    <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500">
                         <div class="stat-number"><bdo dir="ltr">70%</bdo></div>
                         <div
                             class="stat-label"
@@ -1039,9 +1039,9 @@
                             פחות זמן על משימות
                         </div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500 delay-150">
                         <div class="stat-number">
-                            <span>24</span><span>/</span><span>7</span>
+                            <bdo dir="ltr">24/7</bdo>
                         </div>
                         <div
                             class="stat-label"
@@ -1051,7 +1051,7 @@
                             עובד גם כשאתם לא
                         </div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500 delay-300">
                         <div class="stat-number"><bdo dir="ltr">2-4</bdo></div>
                         <div
                             class="stat-label"
@@ -1064,7 +1064,7 @@
                 </div>
             </section>
             <!-- About Section -->
-            <section id="about" class="about">
+            <section id="about" class="about glass-card p-5 sm:p-6 lg:p-12 xl:p-16 mx-4 xs:mx-5 sm:mx-6 lg:mx-8 my-8 max-w-[1200px] xl:mx-auto">
                 <div
                     class="section-label"
                     data-he="הסיפור שלי"
@@ -1080,27 +1080,30 @@
                     למה עסקים מבזבזים זמן - ואיך לעצור את זה
                 </h2>
 
-                <div class="about-content">
+                <div class="about-content grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     <div class="about-text">
                         <p
-                            data-he="<strong>8.5 שנים</strong> הובלתי צוותי פיתוח בחברת ביטוח מובילה. בניתי מערכות CRM, Billing, SMS ותהליכים עסקיים מורכבים. ניהלתי פרויקטים מאפיון ועד הטמעה."
-                            data-en="For <strong>8.5 years</strong> I led development teams at a leading insurance company. Built CRM, Billing, SMS systems and complex business processes. Managed projects from specification to deployment."
+                            class="text-text-secondary mb-6 text-lg"
+                            data-he="<strong>9 שנים</strong> הובלתי צוותי פיתוח בחברת ביטוח מובילה. בניתי מערכות CRM, Billing, SMS ותהליכים עסקיים מורכבים. ניהלתי פרויקטים מאפיון ועד הטמעה."
+                            data-en="For <strong>9 years</strong> I led development teams at a leading insurance company. Built CRM, Billing, SMS systems and complex business processes. Managed projects from specification to deployment."
                         >
-                            <strong>8.5 שנים</strong> הובלתי צוותי פיתוח בחברת
+                            <strong class="text-text-primary">9 שנים</strong> הובלתי צוותי פיתוח בחברת
                             תוכנה מובילה בעולם הביטוח. בניתי מערכות CRM,
                             Billing, SMS ותהליכים עסקיים מורכבים. ניהלתי
                             פרויקטים מאפיון ועד הטמעה.
                         </p>
                         <p
+                            class="text-text-secondary mb-6 text-lg"
                             data-he="אחרי שראיתי את הפוטנציאל של AI, החלטתי לקחת את הניסיון שצברתי ולבנות משהו חדש. <strong>ב-10 חודשים</strong> בניתי את forminue.com - מערכת SaaS מלאה עם סוכנים אוטומטיים."
                             data-en="After seeing AI's potential, I decided to take my experience and build something new. <strong>In 10 months</strong> I built forminue.com - a complete SaaS system with automated agents."
                         >
                             אחרי שראיתי את הפוטנציאל של AI, החלטתי לקחת את
                             הניסיון שצברתי ולבנות משהו חדש.
-                            <strong>ב-10 חודשים</strong> בניתי את forminue.com -
+                            <strong class="text-text-primary">ב-10 חודשים</strong> בניתי את forminue.com -
                             מערכת SaaS מלאה עם סוכנים אוטומטיים.
                         </p>
                         <p
+                            class="text-text-secondary mb-6 text-lg"
                             data-he="עכשיו אני עוזר לעסקים להשתמש בטכנולוגיה הזו. לא כקונספט - ככלי עבודה אמיתי שחוסך זמן וכסף."
                             data-en="Now I help businesses use this technology. Not as a concept - as a real working tool that saves time and money."
                         >
@@ -1167,7 +1170,7 @@
             </section>
 
             <!-- Services Section -->
-            <section id="services">
+            <section id="services" class="px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 xl:py-24 max-w-[1200px] mx-auto">
                 <div
                     class="section-label"
                     data-he="פיתוח סוכני AI"
@@ -1183,7 +1186,7 @@
                     איפה הזמן שלכם נשרף?
                 </h2>
 
-                <div class="services-grid">
+                <div class="services-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
                     <div class="service-card">
                         <div class="service-icon">
                             <svg aria-label="Operational Management">
@@ -1191,12 +1194,14 @@
                             </svg>
                         </div>
                         <h3
+                            class="text-xl mb-3"
                             data-he="סוכני ניהול תפעולי"
                             data-en="Operational Management Agents"
                         >
                             סוכני ניהול תפעולי
                         </h3>
                         <p
+                            class="text-text-secondary text-base"
                             data-he="אוטומציה של משימות חוזרות: תיאום משמרות, החלפות, דיווחים שבועיים, התראות חריגים"
                             data-en="Automation of recurring tasks: shift coordination, replacements, weekly reports, anomaly alerts"
                         >
@@ -1212,12 +1217,14 @@
                             </svg>
                         </div>
                         <h3
+                            class="text-xl mb-3"
                             data-he="סוכני תקשורת"
                             data-en="Communication Agents"
                         >
                             סוכני תקשורת
                         </h3>
                         <p
+                            class="text-text-secondary text-base"
                             data-he="ניהול תקשורת עם לקוחות: תזכורות, עדכונים, מענה לשאלות נפוצות, תיאום פגישות"
                             data-en="Customer communication management: reminders, updates, FAQ responses, appointment scheduling"
                         >
@@ -1233,12 +1240,14 @@
                             </svg>
                         </div>
                         <h3
+                            class="text-xl mb-3"
                             data-he="סוכני ניתוח נתונים"
                             data-en="Data Analysis Agents"
                         >
                             סוכני ניתוח נתונים
                         </h3>
                         <p
+                            class="text-text-secondary text-base"
                             data-he="הפקת תובנות מהנתונים שלך: דוחות אוטומטיים, זיהוי מגמות, התראות על שינויים משמעותיים"
                             data-en="Extracting insights from your data: automatic reports, trend identification, alerts on significant changes"
                         >
@@ -1254,12 +1263,14 @@
                             </svg>
                         </div>
                         <h3
+                            class="text-xl mb-3"
                             data-he="סוכני אינטגרציה"
                             data-en="Integration Agents"
                         >
                             סוכני אינטגרציה
                         </h3>
                         <p
+                            class="text-text-secondary text-base"
                             data-he="חיבור בין מערכות קיימות: סנכרון נתונים, העברת מידע אוטומטית, ביטול עבודה כפולה"
                             data-en="Connecting existing systems: data sync, automatic information transfer, eliminating duplicate work"
                         >
@@ -1271,7 +1282,7 @@
             </section>
 
             <!-- Proof Section -->
-            <section id="proof" class="proof-section">
+            <section id="proof" class="proof-section glass-card bg-proof-gradient p-5 sm:p-6 lg:p-12 xl:p-16 mx-4 xs:mx-5 sm:mx-6 lg:mx-8 my-8 max-w-[1200px] xl:mx-auto text-center">
                 <div
                     class="section-label"
                     data-he="הוכחת יכולת"
@@ -1279,7 +1290,7 @@
                 >
                     הוכחת יכולת
                 </div>
-                <div class="proof-logo">forminue.com</div>
+                <div class="proof-logo font-cormorant text-3xl font-semibold text-accent-primary mb-4">forminue.com</div>
                 <h2
                     class="section-title"
                     data-he="פלטפורמת AI עם סוכנים אוטונומיים"
@@ -1288,31 +1299,31 @@
                     פלטפורמת AI עם סוכנים אוטונומיים
                 </h2>
 
-                <div class="proof-stats">
-                    <div class="proof-stat">
-                        <div class="proof-stat-value">10</div>
+                <div class="proof-stats flex justify-center gap-8 lg:gap-16 my-8 flex-wrap">
+                    <div class="proof-stat text-center">
+                        <div class="proof-stat-value stat-number text-4xl font-bold font-inter">10</div>
                         <div
-                            class="proof-stat-label"
+                            class="proof-stat-label text-sm text-text-secondary"
                             data-he="חודשי פיתוח"
                             data-en="Months of Development"
                         >
                             חודשי פיתוח
                         </div>
                     </div>
-                    <div class="proof-stat">
-                        <div class="proof-stat-value">1</div>
+                    <div class="proof-stat text-center">
+                        <div class="proof-stat-value stat-number text-4xl font-bold font-inter">1</div>
                         <div
-                            class="proof-stat-label"
+                            class="proof-stat-label text-sm text-text-secondary"
                             data-he="מפתח"
                             data-en="Developer"
                         >
                             מפתח
                         </div>
                     </div>
-                    <div class="proof-stat">
-                        <div class="proof-stat-value">5</div>
+                    <div class="proof-stat text-center">
+                        <div class="proof-stat-value stat-number text-4xl font-bold font-inter">5</div>
                         <div
-                            class="proof-stat-label"
+                            class="proof-stat-label text-sm text-text-secondary"
                             data-he="סוגי משרדים"
                             data-en="Office Types"
                         >
@@ -1322,11 +1333,7 @@
                 </div>
 
                 <p
-                    style="
-                        color: var(--text-secondary);
-                        max-width: 700px;
-                        margin: 0 auto;
-                    "
+                    class="text-text-secondary max-w-[700px] mx-auto"
                     data-he="פלטפורמה מלאה לניהול משרדים (משפטי, רפואי, ביטוח, פיננסי, נדל״ן) עם סוכני AI מובנים לאוטומציה של תהליכים עסקיים."
                     data-en="Complete platform for office management (legal, medical, insurance, financial, real estate) with built-in AI agents for business process automation."
                 >
@@ -1334,7 +1341,7 @@
                     נדל״ן) עם סוכני AI מובנים לאוטומציה של תהליכים עסקיים.
                 </p>
 
-                <div class="proof-features">
+                <div class="proof-features flex justify-center gap-4 flex-wrap mt-8">
                     <span class="proof-feature">Multi-tenant SaaS</span>
                     <span
                         class="proof-feature"
@@ -1364,7 +1371,7 @@
             </section>
 
             <!-- FAQ Section -->
-            <section id="faq" class="faq-section">
+            <section id="faq" class="faq-section glass-card p-5 sm:p-6 lg:p-12 xl:p-16 mx-4 xs:mx-5 sm:mx-6 lg:mx-8 my-8 max-w-[1200px] xl:mx-auto">
                 <div class="section-label" data-he="שאלות נפוצות" data-en="FAQ">
                     שאלות נפוצות
                 </div>
@@ -1376,7 +1383,7 @@
                     שאלות נפוצות על סוכני AI לעסקים
                 </h2>
 
-                <div class="faq-grid">
+                <div class="faq-grid grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
                     <div class="faq-item">
                         <h3
                             data-he="מה זה סוכן AI?"
@@ -1454,14 +1461,16 @@
             </section>
 
             <!-- CTA Section -->
-            <section id="contact" class="cta-section">
+            <section id="contact" class="cta-section text-center px-4 xs:px-5 sm:px-6 lg:px-8 py-16 lg:py-24 max-w-[1200px] mx-auto">
                 <h2
+                    class="text-3xl sm:text-4xl xl:text-5xl font-bold mb-6"
                     data-he="בואו נדבר על העסק שלכם"
                     data-en="Let's Talk About Your Business"
                 >
                     בואו נדבר על העסק שלכם
                 </h2>
                 <p
+                    class="text-text-secondary text-lg max-w-[600px] mx-auto mb-8"
                     data-he="שיחה קצרה להבין מה כואב לכם, ולראות איך סוכן AI יכול לעזור. בלי התחייבות."
                     data-en="A short conversation to understand your pain points and see how an AI agent can help. No commitment."
                 >
@@ -1471,8 +1480,7 @@
 
                 <a
                     href="#contact"
-                    class="btn-primary"
-                    style="margin-bottom: 2rem"
+                    class="btn-primary mb-8"
                 >
                     <span data-he="לתיאום שיחה" data-en="Schedule a Call"
                         >לתיאום שיחה</span
@@ -1482,7 +1490,7 @@
                     </svg>
                 </a>
 
-                <div class="contact-options">
+                <div class="contact-options flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <a href="https://wa.me/972544020091" class="contact-btn">
                         <svg aria-hidden="true">
                             <use href="icons.svg#icon-whatsapp"></use>
@@ -1508,7 +1516,7 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="border-t border-accent-primary/15 py-8 text-center text-text-secondary text-sm">
             <p>
                 © 2025 Mindellect — Automating Excellence |
                 <span data-he="כל הזכויות שמורות" data-en="All Rights Reserved"

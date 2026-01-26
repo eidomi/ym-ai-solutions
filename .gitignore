@@ -22,6 +22,9 @@ Thumbs.db
 *.pss
 *.sw?
 
+# Dependencies
+node_modules/
+
 # Logs
 logs
 *.log
