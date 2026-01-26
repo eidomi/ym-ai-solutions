@@ -8,6 +8,13 @@ YM AI Solutions - A bilingual (Hebrew/English) single-page marketing website wit
 
 ## Development
 
+### Principles
+
+- TDD: red-green-refactor cycle
+- Evidence > Assumptions | Measurements > Estimates
+- New evidence contradicts → ADJUST immediately
+- Robust solution > quick patch (except production fires)
+
 **Start dev server:** Use VS Code Live Server extension - right-click `index.html` → "Open with Live Server" (runs on `http://localhost:5500`)
 
 **Debug:** Pre-configured launch configs in `.vscode/launch.json` for Chrome and Edge
@@ -26,24 +33,29 @@ ym-ai-solutions/
 ## Architecture
 
 ### Separation of Concerns
+
 - `index.html` - HTML structure and JavaScript (~1,150 lines)
 - `styles.css` - All CSS including responsive breakpoints (~1,370 lines)
 - `icons.svg` - Reusable SVG icon sprites
 - No build process or dependencies
 
 ### SVG Icon System
+
 Icons are defined as `<symbol>` elements in `icons.svg` and referenced via:
+
 ```html
 <svg><use href="icons.svg#icon-name"></use></svg>
 ```
 
 Available icons:
+
 - `icon-rocket` - Hero badge
 - `icon-chart`, `icon-message`, `icon-trending`, `icon-sync` - Service cards
 - `icon-arrow-left`, `icon-arrow-right` - CTA buttons (swapped by language)
 - `icon-whatsapp`, `icon-email`, `icon-phone` - Contact section
 
 ### Bilingual System
+
 - Default language: Hebrew (RTL)
 - Language toggle switches between Hebrew/English
 - Translations use `data-he` and `data-en` attributes on elements
@@ -51,11 +63,13 @@ Available icons:
 - Hebrew uses 'Heebo' font, English uses 'Inter' font
 
 ### RTL/LTR Handling
+
 - `body.en` class triggers LTR layout
 - Arrow icons swap direction: `icon-arrow-left` (Hebrew) ↔ `icon-arrow-right` (English)
 - Timeline and directional elements have separate RTL/LTR CSS rules (e.g., `body.en .journey-timeline`)
 
 ### CSS Architecture
+
 - Warm Glass theme with gradient accents (`--accent-primary: #C4856A`, `--accent-secondary: #D4A088`)
 - CSS variables defined in `:root` for theming
 - Glass morphism effects with `backdrop-filter: blur()`
