@@ -403,24 +403,26 @@
     }
 
     /* Mobile Nav Drawer */
+    /* RTL (Hebrew default): drawer on RIGHT, slides off to right */
     .mobile-nav-drawer {
-        @apply fixed top-0 end-0 w-[280px] max-w-[85vw] h-dvh
+        @apply fixed top-0 right-0 w-[280px] max-w-[85vw] h-dvh
            bg-[rgba(250,247,242,0.98)] backdrop-blur-glass z-[99]
            flex flex-col gap-2 transition-transform duration-300;
         transform: translateX(100%);
         padding: calc(70px + 2rem) 1.5rem 2rem;
-        border-inline-start: 1px solid rgba(196, 133, 106, 0.15);
+        border-left: 1px solid rgba(196, 133, 106, 0.15);
     }
 
+    /* LTR (English): drawer on LEFT, slides off to left */
     body.en .mobile-nav-drawer {
-        @apply end-auto start-0;
+        @apply right-auto left-0;
         transform: translateX(-100%);
-        border-inline-start: none;
-        border-inline-end: 1px solid rgba(196, 133, 106, 0.15);
+        border-left: none;
+        border-right: 1px solid rgba(196, 133, 106, 0.15);
     }
 
     .mobile-nav-drawer.open {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 
     .mobile-nav-drawer a {
