@@ -445,7 +445,7 @@
 
         <main class="relative z-[2]">
             <!-- Hero Section -->
-            <section class="hero relative flex flex-col justify-center min-h-dvh pt-nav lg:pt-nav-lg px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-[1200px] mx-auto">
+            <section id="hero" class="hero relative flex flex-col justify-center min-h-dvh pt-nav lg:pt-nav-lg px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-[1200px] mx-auto">
                 <!-- Hero Illustration: AI-Human Collaboration -->
                 <svg
                     class="hero-illustration"
@@ -1507,7 +1507,7 @@
             </section>
         </main>
 
-        <footer class="border-t border-accent-primary/15 py-8 text-center text-text-secondary text-sm">
+        <footer class="site-footer border-t border-accent-primary/15 py-8 text-center text-text-secondary text-sm">
             <p>
                 © 2025 Mindellect — Automating Excellence |
                 <span data-he="כל הזכויות שמורות" data-en="All Rights Reserved"
@@ -1515,6 +1515,34 @@
                 >
             </p>
         </footer>
+
+        <!-- Mobile Bottom Tab Navigation -->
+        <nav class="bottom-nav" aria-label="Mobile navigation">
+            <a href="#" class="bottom-nav-tab active" data-section="hero">
+                <svg aria-hidden="true">
+                    <use href="icons.svg#icon-rocket"></use>
+                </svg>
+                <span data-he="בית" data-en="Home">בית</span>
+            </a>
+            <a href="#services" class="bottom-nav-tab" data-section="services">
+                <svg aria-hidden="true">
+                    <use href="icons.svg#icon-chart"></use>
+                </svg>
+                <span data-he="שירותים" data-en="Services">שירותים</span>
+            </a>
+            <a href="#proof" class="bottom-nav-tab" data-section="proof">
+                <svg aria-hidden="true">
+                    <use href="icons.svg#icon-trending"></use>
+                </svg>
+                <span data-he="הוכחה" data-en="Proof">הוכחה</span>
+            </a>
+            <a href="#contact" class="bottom-nav-tab" data-section="contact">
+                <svg aria-hidden="true">
+                    <use href="icons.svg#icon-message"></use>
+                </svg>
+                <span data-he="צור קשר" data-en="Contact">צור קשר</span>
+            </a>
+        </nav>
 
         <script src="main.js" defer></script>
     </body>

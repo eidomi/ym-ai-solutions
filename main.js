@@ -71,7 +71,7 @@ function initMobileNav() {
         ) {
             closeDrawer();
         }
-    });
+    }, { passive: true });
 }
 
 initMobileNav();
@@ -120,10 +120,13 @@ function toggleLanguage() {
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Skip bottom nav tabs (handled separately) and bare "#" links
+        if (this.closest('.bottom-nav') || href === '#') {
+            return;
+        }
         e.preventDefault();
-        const target = document.querySelector(
-            this.getAttribute('href'),
-        );
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -185,10 +188,12 @@ toggleLanguage = function () {
     }
 };
 
-// Track scroll depth
+// Track scroll depth with throttling for performance
 let scrollDepths = [25, 50, 75, 100];
 let trackedDepths = [];
-window.addEventListener('scroll', function () {
+let scrollTicking = false;
+
+function trackScrollDepth() {
     const scrollPercent = Math.round(
         (window.scrollY /
             (document.body.scrollHeight - window.innerHeight)) *
@@ -208,7 +213,17 @@ window.addEventListener('scroll', function () {
             }
         }
     });
-});
+}
+
+window.addEventListener('scroll', function () {
+    if (!scrollTicking) {
+        requestAnimationFrame(() => {
+            trackScrollDepth();
+            scrollTicking = false;
+        });
+        scrollTicking = true;
+    }
+}, { passive: true });
 
 // Track FAQ interactions
 document.querySelectorAll('.faq-item').forEach((item) => {
@@ -363,3 +378,82 @@ function initFAQAccordion() {
 }
 
 initFAQAccordion();
+
+// Bottom Navigation Active State Tracking
+function initBottomNav() {
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (!bottomNav) return;
+
+    const tabs = bottomNav.querySelectorAll('.bottom-nav-tab');
+    const sections = ['hero', 'services', 'proof', 'contact'];
+
+    // Map section IDs to their elements
+    const sectionElements = sections.map(id => {
+        return document.getElementById(id);
+    }).filter(Boolean);
+
+    // Intersection Observer for active state
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id || 'hero';
+                updateActiveTab(sectionId);
+            }
+        });
+    }, observerOptions);
+
+    sectionElements.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    function updateActiveTab(sectionId) {
+        tabs.forEach(tab => {
+            const tabSection = tab.dataset.section;
+            if (tabSection === sectionId) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+    }
+
+    // Handle tab clicks
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+
+            if (href === '#') {
+                // Scroll to top for home
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+    // Check initial scroll position on load
+    setTimeout(() => {
+        const scrollPos = window.scrollY;
+        if (scrollPos < 100) {
+            updateActiveTab('hero');
+        }
+    }, 100);
+}
+
+initBottomNav();
