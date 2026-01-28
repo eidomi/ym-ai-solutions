@@ -1,5 +1,25 @@
 let isHebrew = true;
 
+// Error Tracking with Google Analytics
+window.onerror = function(message, source, lineno, colno, error) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+            description: `${message} at ${source}:${lineno}:${colno}`,
+            fatal: false
+        });
+    }
+    return false;
+};
+
+window.onunhandledrejection = function(event) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+            description: `Unhandled Promise: ${event.reason}`,
+            fatal: false
+        });
+    }
+};
+
 // Mobile Navigation
 function initMobileNav() {
     const hamburger = document.querySelector('.nav-hamburger');
