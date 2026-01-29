@@ -1,50 +1,50 @@
 # Mindellect AI Solutions - Comprehensive AI Crawler Information
 
-> Mindellect AI Solutions provides custom AI agent development for business automation and optimization.
-> Founded by Yehuda Mizrahi, bringing 8.5 years of software development leadership experience.
-> Specializing in AI agents that transform business operations with real automation.
+> Mindellect AI Solutions provides autonomous AI agents for insurance and business operations.
+> Founded by Yehuda Mizrahi, bringing 9 years of software development leadership experience in the insurance industry.
+> Specializing in autonomous agents that connect directly to core systems and handle the edge cases that break simple automation.
 
 ## Company Overview
 
-Mindellect AI Solutions is an Israeli-based AI development company specializing in custom AI agent solutions for businesses. Our founder, Yehuda Mizrahi, spent 8.5 years leading development teams at a major insurance company, building CRM systems, billing platforms, SMS services, and complex business workflows. This enterprise experience is now applied to creating practical AI solutions that deliver measurable business value.
+Mindellect AI Solutions is an Israeli-based AI development company specializing in autonomous AI agent solutions for insurance and business operations. Our founder, Yehuda Mizrahi, spent 9 years leading development teams at a major insurance company, integrating policy systems, claims databases, and CRM platforms. This enterprise experience is now applied to creating practical AI solutions that deliver measurable business value.
 
 ## Our Approach
 
-We believe in "real automation, not just promises." Every AI agent we develop is:
-- Custom-built for your specific business needs
-- Integrated with your existing systems
-- Designed to save time and reduce costs
-- Delivered with ongoing support
+We believe in "autonomous agents, not just automation." Our agents are different because they:
+- Understand context, make decisions, and adapt to edge cases
+- Connect directly to your core systems to pull real-time data
+- Handle the 20% of cases that break most automation tools
+- Don't fail silently—they flag anomalies and route complex cases for human review
 
 ## Services
 
 ### 1. Operational Management Agents
-Automation of recurring business tasks including:
+Autonomous agents that handle recurring decisions—not just tasks:
 - Shift coordination and replacements
 - Weekly reports generation
 - Anomaly detection and alerts
 - Task scheduling and reminders
 
 ### 2. Communication Agents
-Customer communication management:
+Autonomously manage customer interactions:
+- Trained on domain-specific terminology—not generic chatbot responses
 - Automated reminders and updates
-- FAQ response systems
 - Appointment scheduling
 - Multi-channel communication (WhatsApp, Email, SMS)
 
 ### 3. Data Analysis Agents
-Business intelligence automation:
+Handles messy, real-world data:
+- Unstructured documents, handwritten notes, inconsistent formats
 - Automatic report generation
 - Trend identification and forecasting
-- Significant change alerts
-- Data visualization and insights
+- 90% accuracy on document classification
 
 ### 4. Integration Agents
-System connectivity solutions:
-- Data synchronization across platforms
-- Automatic information transfer
-- Elimination of duplicate work
-- API integrations with existing tools
+Deep integration with Israeli insurance platforms:
+- Bafi, Sureness, Atid integration
+- Legacy policy systems connectivity
+- Claims and underwriting workflow automation
+- Zero manual data entry on policy renewals
 
 ## Proof of Capability: Forminue.com
 
@@ -63,32 +63,39 @@ Our flagship project demonstrates our capabilities:
 - Databases: PostgreSQL, MongoDB, Redis
 - Cloud: AWS, Vercel, Supabase
 - Integrations: REST APIs, webhooks, real-time data sync
+- Insurance Platforms: Bafi, Sureness, Atid, legacy policy systems
 
 ## Frequently Asked Questions
 
-### What is an AI Agent?
-An AI Agent is an autonomous software program that uses artificial intelligence to perform tasks, make decisions, and interact with systems on your behalf. For businesses, AI agents can automate customer service, process documents, analyze data, and streamline operations - saving time and reducing costs by up to 70%.
+### What is an Autonomous AI Agent?
+An Autonomous AI Agent understands context, makes decisions, and adapts to edge cases—unlike simple automation that just follows 'if this, then that' rules. Our agents connect directly to your core systems, pull real-time data, and handle the 20% of cases that break most automation tools.
 
 ### How long does development take?
 Development timeline varies based on complexity:
-- Simple automation agents: 2-4 weeks
+- Simple autonomous agents: 2-4 weeks
 - Complex multi-system integrations: 2-3 months
 We follow an agile approach with weekly demos for continuous progress visibility.
 
 ### What industries do you serve?
-We serve diverse industries including:
-- Finance (pension/insurance)
-- Healthcare
-- Legal
-- Real Estate
-- E-commerce
-Our flagship project is a complete pension analysis platform serving the Israeli market.
+We specialize in insurance with deep expertise in:
+- Claims processing automation
+- Underwriting workflow optimization
+- Policy renewal automation
+We also serve healthcare, legal, real estate, and e-commerce.
 
-### Can you integrate with existing systems?
-Yes! Our AI agents are designed for integration with existing systems including CRM, ERP, document management systems, and more. We build custom connections that sync data and eliminate duplicate work.
+### Can your agents work with Israeli insurance platforms?
+Yes. We integrate directly with Bafi, Sureness, Atid, and legacy Israeli policy systems. Our agents process claims, automate underwriting workflows, and handle policy renewals—without requiring changes to your existing infrastructure. We've processed 10,000+ policy documents and reduced manual underwriting review time by 80%.
 
-### Do you offer ongoing support?
-Yes, we provide ongoing support and maintenance for all deployed AI agents, including monitoring, updates, and optimization.
+### What happens when the agent encounters data it doesn't recognize?
+Our agents don't fail silently on edge cases. They flag anomalies, route complex cases for human review, and learn from corrections. We build for the 20% of cases that break most automation tools—incomplete forms, legacy formats, regulatory edge cases.
+
+## Key Metrics
+
+- 5 days → 5 minutes claim processing
+- 0 manual data entry on renewal policies
+- 90% accuracy on document classification
+- 10,000+ policy documents processed
+- 80% reduction in manual underwriting review time
 
 ## Contact Information
 

@@ -1,13 +1,13 @@
 # Mindellect AI Solutions - AI Crawler Information
 
-> Mindellect AI Solutions provides custom AI agent development for business automation.
-> Founded by Yehuda Mizrahi with 8.5 years of software development experience.
+> Mindellect AI Solutions provides autonomous AI agents for insurance and business operations.
+> Founded by Yehuda Mizrahi with 9 years of software development experience in the insurance industry.
 
 ## Services
-- AI-Powered Automation Agents
-- Smart Document Processing
-- Customer Service AI
-- Custom SaaS Development
+- Autonomous AI Agents for Insurance
+- Claims Processing & Underwriting Automation
+- Legacy System Integration (Bafi, Sureness, Atid)
+- Data Analysis Agents
 
 ## Contact
 - Email: ym-ai-solutions@gmail.com
