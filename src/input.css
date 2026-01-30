@@ -67,7 +67,7 @@
 @layer components {
     /* Skip Link for Accessibility (WCAG 2.4.1) */
     .skip-link {
-        @apply absolute bg-accent-cta text-white px-4 py-2 font-semibold z-[10001] rounded-b-lg;
+        @apply absolute bg-accent-cta text-white px-4 py-2 font-semibold z-[1000] rounded-b-lg;
         top: -100px;
         left: 50%;
         transform: translateX(-50%);
