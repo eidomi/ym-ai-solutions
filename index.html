@@ -15,7 +15,7 @@
         <title>סוכני AI לביטוח בריאות | Mindellect - צמיחה במכירות + יעילות תפעולית</title>
         <meta
             name="description"
-            content="לא רק חיסכון תפעולי—צמיחה בהכנסות. סוכני AI לביטוח בריאות: השוואת פוליסות מול insurance companies, ניתוח פערי כיסוי בדקות, סגירת עסקאות מהירה. אינטגרציה מלאה עם מערכות ישראליות."
+            content="לא רק חיסכון תפעולי—צמיחה בהכנסות. סוכני AI לביטוח בריאות: השוואת פוליסות מול חברות הביטוח, ניתוח פערי כיסוי בדקות, סגירת עסקאות מהירה. אינטגרציה מלאה עם מערכות ישראליות."
         />
         <meta
             name="keywords"
@@ -34,7 +34,7 @@
         />
         <meta
             property="og:description"
-            content="לא רק חיסכון—צמיחה בהכנסות. השוואת פוליסות מול insurance companies, ניתוח פערי כיסוי בדקות, סגירת עסקאות מהירה. אינטגרציה ישראלית מלאה."
+            content="לא רק חיסכון—צמיחה בהכנסות. השוואת פוליסות מול חברות הביטוח, ניתוח פערי כיסוי בדקות, סגירת עסקאות מהירה. אינטגרציה ישראלית מלאה."
         />
         <meta
             property="og:image"
@@ -58,7 +58,7 @@
         />
         <meta
             name="twitter:description"
-            content="לא רק חיסכון—צמיחה בהכנסות. השוואת פוליסות מול insurance companies, ניתוח פערי כיסוי בדקות. אינטגרציה ישראלית."
+            content="לא רק חיסכון—צמיחה בהכנסות. השוואת פוליסות מול חברות הביטוח, ניתוח פערי כיסוי בדקות. אינטגרציה ישראלית."
         />
         <meta
             name="twitter:image"
@@ -97,6 +97,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+
+        <!-- Preload critical fonts for faster text rendering -->
+        <link rel="preload" href="https://fonts.gstatic.com/s/heebo/v26/NGS6v5_NC0k9P9H0TbFhsqMA.woff2" as="font" type="font/woff2" crossorigin />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=JetBrains+Mono:wght@100;400;800&family=Heebo:wght@200;400;700;900&display=swap"
             rel="stylesheet"
@@ -396,6 +400,9 @@
         <!-- CSS built with Tailwind - source in src/input.css -->
     </head>
     <body>
+        <!-- Skip Link for Accessibility -->
+        <a href="#main-content" class="skip-link" data-he="דלג לתוכן הראשי" data-en="Skip to main content">דלג לתוכן הראשי</a>
+
         <!-- Ambient Background -->
         <div class="ambient-bg">
             <div class="ambient-orb orb-1"></div>
@@ -494,7 +501,7 @@
         </div>
         <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-        <main class="relative z-[2]">
+        <main class="relative z-[2]" id="main-content">
             <!-- Hero Section -->
             <section id="hero" class="hero relative flex flex-col justify-center min-h-dvh pt-nav lg:pt-nav-lg px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-[1200px] mx-auto">
                 <!-- Hero Illustration: AI-Human Collaboration -->
@@ -1045,10 +1052,10 @@
                 </h1>
                 <p
                     class="hero-subtitle text-lg sm:text-xl text-[#6B6B6B] max-w-[600px] mb-6 opacity-0 animate-fade-in-up animate-delay-400"
-                    data-he="לא רק חיסכון תפעולי—צמיחה בהכנסות. סוכני AI שמשווים פוליסות בריאות מול נתוני חברות הביטוח בזמן אמת, מזהים פערי כיסוי, ומאפשרים לך לסגור עסקאות מהר יותר."
-                    data-en="Not just operational savings—revenue growth. AI agents that compare health policies against real Insurance Company Systems data, identify coverage gaps, and help you close deals faster."
+                    data-he="סוכני AI שסוגרים עסקאות—לא רק מנתחים. שולפים פוליסות קיימות מחברות הביטוח, מזהים פערי כיסוי, ומייצרים הצעה מותאמת תוך דקות."
+                    data-en="AI agents that close deals—not just analyze. Pull existing policies from insurers, identify coverage gaps, and generate tailored proposals in minutes."
                 >
-                    לא רק חיסכון תפעולי—צמיחה בהכנסות. סוכני AI שמשווים פוליסות בריאות מול נתוני חברות הביטוח בזמן אמת, מזהים פערי כיסוי, ומאפשרים לך לסגור עסקאות מהר יותר.
+                    סוכני AI שסוגרים עסקאות—לא רק מנתחים. שולפים פוליסות קיימות מחברות הביטוח, מזהים פערי כיסוי, ומייצרים הצעה מותאמת תוך דקות.
                 </p>
                 <p
                     class="text-base text-[#8B8B8B] max-w-[550px] mb-10 opacity-0 animate-fade-in-up animate-delay-500"
@@ -1060,9 +1067,9 @@
                 <div class="hero-cta flex flex-col lg:flex-row gap-4 flex-wrap opacity-0 animate-fade-in-up animate-delay-600">
                     <a href="#contact" class="btn-primary w-full lg:w-auto justify-center">
                         <span
-                            data-he="בדקו התאמה לביטוח הבריאות שלכם"
-                            data-en="Check Fit for Your Health Insurance"
-                            >בדקו התאמה לביטוח הבריאות שלכם</span
+                            data-he="ראו פערי כיסוי תוך 5 דקות"
+                            data-en="See Coverage Gaps in 5 Minutes"
+                            >ראו פערי כיסוי תוך 5 דקות</span
                         >
                         <svg class="btn-icon" aria-hidden="true">
                             <use href="icons.svg#icon-arrow-left"></use>
@@ -1083,10 +1090,10 @@
                         <div class="stat-number" data-he="3X" data-en="3X">3X</div>
                         <div
                             class="stat-label"
-                            data-he="יעילות מכירות"
-                            data-en="Sales Efficiency"
+                            data-he="מהר יותר מהשוואה ידנית"
+                            data-en="Faster Than Manual Comparison"
                         >
-                            יעילות מכירות
+                            מהר יותר מהשוואה ידנית
                         </div>
                     </div>
                     <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500 delay-100">
@@ -1104,10 +1111,10 @@
                         <div class="stat-number" data-he="80%" data-en="80%">80%</div>
                         <div
                             class="stat-label"
-                            data-he="חיסכון תפעולי"
-                            data-en="Operational Savings"
+                            data-he="תביעות פשוטות אוטומטיות"
+                            data-en="Simple Claims Automated"
                         >
-                            חיסכון תפעולי
+                            תביעות פשוטות אוטומטיות
                         </div>
                     </div>
                     <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500 delay-300">
@@ -1221,7 +1228,7 @@
             </section>
 
             <!-- Services Section -->
-            <section id="services" class="px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 xl:py-24 max-w-[1200px] mx-auto">
+            <section id="services" class="px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 max-w-[1200px] mx-auto">
                 <div
                     class="section-label"
                     data-he="צמיחה בהכנסות + יעילות תפעולית"
@@ -1263,7 +1270,7 @@
                             </p>
                             <div class="flex flex-wrap gap-3">
                                 <span class="text-sm px-3 py-1 rounded-full bg-accent-cta/10 text-accent-cta" data-he="זיהוי פערי כיסוי" data-en="Coverage Gap Detection">זיהוי פערי כיסוי</span>
-                                <span class="text-sm px-3 py-1 rounded-full bg-accent-cta/10 text-accent-cta" data-he="נתוני insurance companies" data-en="insurance companies Data">נתוני insurance companies</span>
+                                <span class="text-sm px-3 py-1 rounded-full bg-accent-cta/10 text-accent-cta" data-he="נתוני חברות ביטוח" data-en="Insurance Company Data">נתוני חברות ביטוח</span>
                                 <span class="text-sm px-3 py-1 rounded-full bg-accent-cta/10 text-accent-cta" data-he="הצעה מותאמת בדקות" data-en="Tailored Proposal in Minutes">הצעה מותאמת בדקות</span>
                             </div>
                         </div>
@@ -1505,6 +1512,36 @@
                     <p class="text-sm text-text-secondary mb-2" data-he="הוכחת ביצוע:" data-en="Proof of execution:">הוכחת ביצוע:</p>
                     <a href="https://forminue.com" target="_blank" rel="noopener" class="font-cormorant text-2xl font-semibold text-accent-primary hover:text-accent-cta transition-colors">forminue.com</a>
                     <p class="text-sm text-text-secondary mt-2" data-he="פלטפורמת SaaS מלאה עם סוכני AI — 10 חודשים, מפתח יחיד" data-en="Complete SaaS platform with AI agents — 10 months, solo developer">פלטפורמת SaaS מלאה עם סוכני AI — 10 חודשים, מפתח יחיד</p>
+                </div>
+
+                <!-- Compliance & Security Badge -->
+                <div class="mb-8 p-4 rounded-lg bg-accent-cta/5 border border-accent-cta/20">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <svg class="w-5 h-5 text-accent-cta" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-bold text-accent-cta" data-he="אבטחה ותאימות מובנית" data-en="Built-in Security & Compliance">אבטחה ותאימות מובנית</span>
+                    </div>
+                    <p class="text-sm text-text-secondary text-center" data-he="הסוכנים שלנו בנויים עם אבטחת מידע רפואי מובנית. הצפנת נתונים, בקרת גישה, ותאימות לרגולציות ישראליות—לא תוסף, חלק מהליבה." data-en="Our agents are built with medical data security at the core. Data encryption, access control, and Israeli regulatory compliance—not an add-on, part of the foundation.">הסוכנים שלנו בנויים עם אבטחת מידע רפואי מובנית. הצפנת נתונים, בקרת גישה, ותאימות לרגולציות ישראליות—לא תוסף, חלק מהליבה.</p>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="mb-8 p-4 rounded-lg bg-white/5 border border-accent-primary/10">
+                    <p class="text-sm text-text-secondary text-center mb-4" data-he="מתאים עבור:" data-en="Built for:">מתאים עבור:</p>
+                    <div class="flex justify-center gap-6 lg:gap-10 flex-wrap text-text-primary">
+                        <div class="text-center">
+                            <div class="text-2xl mb-1">🏢</div>
+                            <span class="text-sm" data-he="סוכנויות ביטוח" data-en="Insurance Agencies">סוכנויות ביטוח</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl mb-1">👔</div>
+                            <span class="text-sm" data-he="סוכנים עצמאיים" data-en="Independent Agents">סוכנים עצמאיים</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl mb-1">🏛️</div>
+                            <span class="text-sm" data-he="חברות ביטוח" data-en="Insurance Companies">חברות ביטוח</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="proof-features flex justify-center gap-4 flex-wrap">

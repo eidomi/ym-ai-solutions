@@ -70,11 +70,11 @@
 /* Circuit node pulsing glow */
 @keyframes node-pulse {
   0%, 100% {
-    filter: drop-shadow(0 0 2px rgba(196, 133, 106, 0.4));
+    filter: drop-shadow(0 0 2px rgba(25, 118, 210, 0.4));
     opacity: 0.7;
   }
   50% {
-    filter: drop-shadow(0 0 8px rgba(196, 133, 106, 0.8));
+    filter: drop-shadow(0 0 8px rgba(25, 118, 210, 0.8));
     opacity: 1;
   }
 }

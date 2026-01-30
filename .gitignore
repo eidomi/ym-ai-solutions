@@ -25,6 +25,7 @@ Thumbs.db
 # Dependencies
 node_modules/
 tempDocs/
+docs/
 
 # Logs
 logs
