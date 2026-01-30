@@ -1,5 +1,103 @@
 let isHebrew = true;
 
+// ========================================
+// COOKIE CONSENT
+// ========================================
+function initCookieConsent() {
+    const banner = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+
+    if (!banner) return;
+
+    // Check if consent already given
+    const consent = localStorage.getItem('cookie-consent');
+    if (consent) {
+        banner.classList.add('hidden');
+        return;
+    }
+
+    // Show banner
+    banner.classList.remove('hidden');
+
+    // Accept handler
+    acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.classList.add('hidden');
+
+        // Load GA dynamically
+        loadGoogleAnalytics();
+    });
+
+    // Decline handler
+    declineBtn.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'declined');
+        banner.classList.add('hidden');
+    });
+}
+
+function loadGoogleAnalytics() {
+    // Check if already loaded
+    if (document.querySelector('script[src*="googletagmanager"]')) return;
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-W3SL4TQ2SQ';
+    document.head.appendChild(script);
+
+    script.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-W3SL4TQ2SQ');
+    };
+}
+
+// Initialize cookie consent
+initCookieConsent();
+
+// ========================================
+// LEGAL MODALS
+// ========================================
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // Focus trap and close on escape
+    modal.addEventListener('keydown', handleModalKeydown);
+
+    // Close on backdrop click
+    const backdrop = modal.querySelector('.legal-modal-backdrop');
+    if (backdrop) {
+        backdrop.addEventListener('click', function() {
+            closeModal(modalId);
+        });
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    modal.removeEventListener('keydown', handleModalKeydown);
+}
+
+function handleModalKeydown(e) {
+    if (e.key === 'Escape') {
+        const openModal = document.querySelector('.legal-modal.open');
+        if (openModal) {
+            closeModal(openModal.id);
+        }
+    }
+}
+
+// Make functions globally accessible
+window.openModal = openModal;
+window.closeModal = closeModal;
+
 // Error Tracking with Google Analytics
 window.onerror = function(message, source, lineno, colno, error) {
     if (typeof gtag !== 'undefined') {
