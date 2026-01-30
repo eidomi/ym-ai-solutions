@@ -470,6 +470,7 @@
                 class="nav-hamburger"
                 aria-label="Toggle menu"
                 aria-expanded="false"
+                aria-controls="mobileDrawer"
             >
                 <span></span>
                 <span></span>
@@ -1084,7 +1085,7 @@
                     >
                 </div>
 
-                <div class="stats-row grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-20 pt-12 border-t border-accent-primary/20">
+                <div class="stats-row grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-20 pt-12 border-t border-accent-primary/20">
                     <!-- Sales Metrics -->
                     <div class="stat-item text-center opacity-0 translate-y-5 transition-all duration-500">
                         <div class="stat-number" data-he="3X" data-en="3X">3X</div>
@@ -1594,12 +1595,17 @@
                 <div class="faq-grid grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
                     <div class="faq-item">
                         <h3
+                            id="faq-q1"
+                            aria-controls="faq-a1"
                             data-he="מה ההבדל בינכם לכלי 'השוואת פוליסות' רגיל?"
                             data-en="How are you different from regular 'policy comparison' tools?"
                         >
                             מה ההבדל בינכם לכלי 'השוואת פוליסות' רגיל?
                         </h3>
                         <p
+                            id="faq-a1"
+                            role="region"
+                            aria-labelledby="faq-q1"
                             data-he="כלי השוואה מנתחים נתונים ומציגים תוצאות. הסוכנים שלנו מקבלים החלטות ופועלים. הם נכנסים למערכות הליבה שלך, מעבדים תביעות, מבצעים חיתום, ומחדשים פוליסות—אוטונומית. לא עוד דוחות שצריך לטפל בהם ידנית."
                             data-en="Comparison tools analyze data and present results. Our agents make decisions and act. They enter your core systems, process claims, perform underwriting, and renew policies—autonomously. No more reports that need manual handling."
                         >
@@ -1609,12 +1615,17 @@
 
                     <div class="faq-item">
                         <h3
+                            id="faq-q2"
+                            aria-controls="faq-a2"
                             data-he="איך הסוכנים מטפלים בתביעות בריאות מורכבות?"
                             data-en="How do agents handle complex health claims?"
                         >
                             איך הסוכנים מטפלים בתביעות בריאות מורכבות?
                         </h3>
                         <p
+                            id="faq-a2"
+                            role="region"
+                            aria-labelledby="faq-q2"
                             data-he="הסוכנים שלנו מסווגים מסמכים רפואיים, מאמתים זכאות מול תנאי הפוליסה, מחשבים כיסוי כולל החרגות ונספחים, ומפנים מקרים מורכבים לסקירה אנושית—עם המלצה מנומקת. 80% מהתביעות הפשוטות מטופלות אוטומטית."
                             data-en="Our agents classify medical documents, verify eligibility against policy terms, calculate coverage including exclusions and riders, and route complex cases for human review—with reasoned recommendations. 80% of simple claims are handled automatically."
                         >
@@ -1624,12 +1635,17 @@
 
                     <div class="faq-item">
                         <h3
+                            id="faq-q3"
+                            aria-controls="faq-a3"
                             data-he="האם אתם עומדים ברגולציה של מידע רפואי?"
                             data-en="Do you comply with medical data regulations?"
                         >
                             האם אתם עומדים ברגולציה של מידע רפואי?
                         </h3>
                         <p
+                            id="faq-a3"
+                            role="region"
+                            aria-labelledby="faq-q3"
                             data-he="בהחלט. הסוכנים שלנו בנויים עם אבטחת מידע רפואי מובנית—הצפנה, בקרת גישה, ולוגים מלאים לביקורת. אנחנו עובדים בתוך התשתית שלך, לא שולחים נתונים לענן חיצוני. המידע הרגיש נשאר אצלך."
                             data-en="Absolutely. Our agents are built with medical data security built-in—encryption, access control, and full audit logs. We work within your infrastructure, not sending data to external clouds. Sensitive data stays with you."
                         >
@@ -1639,12 +1655,17 @@
 
                     <div class="faq-item">
                         <h3
+                            id="faq-q4"
+                            aria-controls="faq-a4"
                             data-he="איך הסוכנים מתחברים למערכות הביטוח הישראליות?"
                             data-en="How do agents connect to Israeli insurance systems?"
                         >
                             איך הסוכנים מתחברים למערכות הביטוח הישראליות?
                         </h3>
                         <p
+                            id="faq-a4"
+                            role="region"
+                            aria-labelledby="faq-q4"
                             data-he="יש לנו ניסיון ישיר עם הפלטפורמות המרכזיות בשוק: מערכת לבקשת העתקי פוליסות, מסלקה פנסיונית, סימולטורים חכמים, ופורמטים של פוליסות ישראליות. הסוכנים שלנו נכנסים לתהליכים הקיימים—בלי לדרוש שינויי תשתית יקרים."
                             data-en="We have direct experience with the main platforms in the market: policy copy request system, pension clearing house, Smart Simulators, and Israeli policy formats. Our agents plug into existing workflows—without requiring expensive infrastructure changes."
                         >
@@ -1654,12 +1675,17 @@
 
                     <div class="faq-item">
                         <h3
+                            id="faq-q5"
+                            aria-controls="faq-a5"
                             data-he="מה קורה כשהסוכן נתקל בהצהרת בריאות לא ברורה?"
                             data-en="What happens when an agent encounters an unclear health declaration?"
                         >
                             מה קורה כשהסוכן נתקל בהצהרת בריאות לא ברורה?
                         </h3>
                         <p
+                            id="faq-a5"
+                            role="region"
+                            aria-labelledby="faq-q5"
                             data-he="הסוכנים שלנו לא נכשלים בשקט. הם מסמנים אנומליות, מזהים מידע חסר או סותר, ומפנים לחתם עם המלצה מנומקת. אנחנו בנויים עבור ה-20% מהמקרים ששוברים כלי אוטומציה רגילים—כתב יד, טפסים ישנים, מקרי קצה רגולטוריים."
                             data-en="Our agents don't fail silently. They flag anomalies, identify missing or contradictory information, and route to underwriters with reasoned recommendations. We're built for the 20% of cases that break regular automation tools—handwriting, legacy forms, regulatory edge cases."
                         >
